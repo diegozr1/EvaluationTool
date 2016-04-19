@@ -1,20 +1,24 @@
 <!doctype html>
 <html>
 <head>
-    <title>Authentication</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/stylesheets">
+  <% include partials/head %>
 </head>
 <body>
-<div class="container">
-    <div class="jumbotron ">
-        <h1><span class="fa fa-money"></span> Project EvaluationTool</h1>
-        <p>Login or Register with:</p>
-        <a href="/login" class="btn btn-default"><span class="fa fa-log-in"></span> Log In</a>
-        <a href="/signup" class="btn btn-default"><span class="fa fa-log-out"></span> Sign Up</a>
-    </div>
+  <div class="container">
+      <div class="jumbotron ">
+          <h1><span class="fa fa-money fa-3x"></span>&nbsp;&nbsp;&nbsp;Project EvaluationTool </h1>
+          <p>Welcome!, to start evaluating your projects start here</p>
+          <div class="row">
+            <div class="col-md-6">
+              <a href="/login" class="btn btn-default"><span class="fa fa-log-in"></span> Log in</a>
+              <a href="/signup" class="btn btn-info"><span class="fa fa-log-out"></span> Register</a>
+            </div>
+            <div class="col-md-6 text-right">
+              <img src="images/LogoITESM.png" alt="" width="50%" height="">
+            </div>
+          </div>
+      </div>
 
-</div>
+  </div>
 </body>
 </html>

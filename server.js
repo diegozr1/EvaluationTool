@@ -39,13 +39,14 @@ app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 app.use(express.static(path.join(__dirname, 'public')));
 
-
+app.use(function(err, req,res, next){
+  res.status(404).send("Resource not found!");
+});
 
 app.use(function(err, req, res, next) {
   console.error(err.stack);
   res.status(500).send('Something broke!');
 });
-
 
 // routes ======================================================================
 require('./app/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
