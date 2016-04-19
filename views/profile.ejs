@@ -3,27 +3,61 @@
 <head>
   <% include partials/head %>
 </head>
-<body>
-<div class="container">
-  <div class="wrapper">
-    <div class="page-header text-center">
-        <h1><span class="fa fa-anchor"></span> Profile Page</h1>
-        <a href="/logout" class="btn btn-primary btn-sm">Logout</a>
-    </div>
+<body class="nav-md">
+<div class="container body">
+  <div class="main_container">
 
 
-      <div class="row">
-          <!-- LOCAL INFORMATION -->
-          <div class="col-sm-6">
-              <div class="well">
-                  <h3><span class="fa fa-user"></span> Local</h3>
-                      <p>
-                          <strong>Email</strong>: <%= user.local.email %><br>
-                      </p>
+  <% include partials/sidebar %>
+
+  <% include partials/topmenu %>
+
+
+    <div class="right_col" role="main">
+      <!--
+        <div class="page-header text-center">
+            <h1><span class="fa fa-anchor"></span> Profile Page</h1>
+            <a href="/logout" class="btn btn-primary btn-sm">Logout</a>
+        </div>
+
+
+          <div class="row">
+              <div class="col-sm-6">
+                  <div class="well">
+                      <h3><span class="fa fa-user"></span> Local</h3>
+                          <p>
+                              <strong>Email</strong>: <%= user.local.email %><br>
+                          </p>
+                  </div>
               </div>
-          </div>
-      </div>
+        </div>
+      -->
     </div>
+  </div>
 </div>
+
+<div id="custom_notifications" class="custom-notifications dsp_none">
+  <ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group">
+  </ul>
+  <div class="clearfix"></div>
+  <div id="notif-group" class="tabbed_notifications"></div>
+</div>
+
+<script src="js/bootstrap.min.js"></script>
+
+<!-- bootstrap progress js -->
+<script src="js/progressbar/bootstrap-progressbar.min.js"></script>
+<!-- icheck -->
+<script src="js/icheck/icheck.min.js"></script>
+<!-- daterangepicker -->
+<script type="text/javascript" src="js/moment/moment.min.js"></script>
+<script type="text/javascript" src="js/datepicker/daterangepicker.js"></script>
+<!-- chart js -->
+<script src="js/chartjs/chart.min.js"></script>
+<!-- sparkline -->
+<script src="js/sparkline/jquery.sparkline.min.js"></script>
+
+<script src="js/custom.js"></script>
+
 </body>
 </html>
