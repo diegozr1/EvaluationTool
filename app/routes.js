@@ -4,7 +4,14 @@ module.exports = function(app, passport) {
 
     // show the home page (will also have our login links)
     app.get('/', function(req, res) {
+      if(!req.user){
         res.render('index.ejs');
+      }else{
+        res.render("profile.ejs",{
+          user:req.user
+        });
+      }
+
     });
 
     // PROFILE SECTION =========================
@@ -13,6 +20,36 @@ module.exports = function(app, passport) {
             user : req.user
         });
     });
+
+    // PAYBACK SECTION =========================
+    app.get('/payback', isLoggedIn, function(req, res) {
+        res.render('general/payback.ejs', {
+            user : req.user
+        });
+    });
+
+
+    // NET SECTION =========================
+    app.get('/net', isLoggedIn, function(req, res) {
+        res.render('general/net.ejs', {
+            user : req.user
+        });
+    });
+
+    // CHECKLIST SECTION =========================
+    app.get('/checklist', isLoggedIn, function(req, res) {
+        res.render('general/checklist.ejs', {
+            user : req.user
+        });
+    });
+
+    // PROJECT SECTION =========================
+    app.get('/project', isLoggedIn, function(req, res) {
+        res.render('general/project.ejs', {
+            user : req.user
+        });
+    });
+
 
     // LOGOUT ==============================
     app.get('/logout', function(req, res) {
