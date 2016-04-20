@@ -17,44 +17,44 @@
 
 
       <div class="row top_tiles">
-                  <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="tile-stats">
-                      <div class="icon"><i class="fa fa-dollar"></i>
-                      </div>
-                      <div class="count">USD - MXN</div>
-                      <br>
-                      <h3 id="usdmxn"></h3>                      
-                    </div>
-                  </div>
-                  <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="tile-stats">
-                      <div class="icon"><i class="fa fa-dollar"></i>
-                      </div>
-                      <div class="count">USD - BRL</div>
+        <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+          <div class="tile-stats">
+            <div class="icon"><i class="fa fa-dollar"></i>
+            </div>
+            <div class="count">USD - MXN</div>
+            <br>
+            <h3 id="usdmxn"></h3>
+          </div>
+        </div>
+        <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+          <div class="tile-stats">
+            <div class="icon"><i class="fa fa-dollar"></i>
+            </div>
+            <div class="count">USD - BRL</div>
 
-                      <br>
-                      <h3 id="usdbrl"></h3>
-                    </div>
-                  </div>
-                  <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="tile-stats">
-                      <div class="icon"><i class="fa fa-dollar"></i>
-                      </div>
-                      <div class="count">USD - EURO</div>
-                      <br>
-                      <h3 id="usdeur"></h3>
-                    </div>
-                  </div>
-                  <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="tile-stats">
-                      <div class="icon"><i class="fa fa-dollar"></i>
-                      </div>
-                      <div class="count">USD - JPY</div>
-                      <br>
-                      <h3 id="usdjpy"></h3>
-                    </div>
-                  </div>
-                </div>
+            <br>
+            <h3 id="usdbrl"></h3>
+          </div>
+        </div>
+        <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+          <div class="tile-stats">
+            <div class="icon"><i class="fa fa-dollar"></i>
+            </div>
+            <div class="count">USD - EURO</div>
+            <br>
+            <h3 id="usdeur"></h3>
+          </div>
+        </div>
+        <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+          <div class="tile-stats">
+            <div class="icon"><i class="fa fa-dollar"></i>
+            </div>
+            <div class="count">USD - JPY</div>
+            <br>
+            <h3 id="usdjpy"></h3>
+          </div>
+        </div>
+      </div>
 
 
 
@@ -88,48 +88,22 @@
   </div>
 </div>
 
-<div id="custom_notifications" class="custom-notifications dsp_none">
-  <ul class="list-unstyled notifications clearfix" data-tabbed_notifications="notif-group">
-  </ul>
-  <div class="clearfix"></div>
-  <div id="notif-group" class="tabbed_notifications"></div>
-</div>
+  <% include partials/js.ejs %>
 
-<script src="js/bootstrap.min.js"></script>
-
-<!-- bootstrap progress js -->
-<script src="js/progressbar/bootstrap-progressbar.min.js"></script>
-<!-- icheck -->
-<script src="js/icheck/icheck.min.js"></script>
-<!-- daterangepicker -->
-<script type="text/javascript" src="js/moment/moment.min.js"></script>
-<script type="text/javascript" src="js/datepicker/daterangepicker.js"></script>
-<!-- chart js -->
-<script src="js/chartjs/chart.min.js"></script>
-<!-- sparkline -->
-<script src="js/sparkline/jquery.sparkline.min.js"></script>
-
-<script src="js/custom.js"></script>
-
-<script>
-$(document).ready(function(){
-		$.getJSON("https://api.coinbase.com/v2/exchange-rates",function(result){
-      $("#usdmxn").append(result.data.rates['MXN'] + " ");
-      $("#usdbrl").append(result.data.rates['BRL'] + " ");
-      $("#usdeur").append(result.data.rates['EUR'] + " ");
-      $("#usdjpy").append(result.data.rates['JPY'] + " ");
-      /*
-      $.each(result.data.rates['MXN'], function(i, field){
-        //$("#usdmxn").append(JSON.stringify(field) + " ");
+  <script>
+  $(document).ready(function(){
+  		$.getJSON("https://api.coinbase.com/v2/exchange-rates",function(result){
+        $("#usdmxn").append(result.data.rates['MXN'] + " ");
+        $("#usdbrl").append(result.data.rates['BRL'] + " ");
+        $("#usdeur").append(result.data.rates['EUR'] + " ");
+        $("#usdjpy").append(result.data.rates['JPY'] + " ");
+        /*
+        $.each(result.data.rates['MXN'], function(i, field){
+          //$("#usdmxn").append(JSON.stringify(field) + " ");
+        });
+        */
       });
-      */
-    });
-});
-</script>
-<button>Get JSON data</button>
-<div></div>
-
-
-
+  });
+  </script>
 </body>
 </html>

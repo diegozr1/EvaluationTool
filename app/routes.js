@@ -7,7 +7,7 @@ module.exports = function(app, passport) {
       if(!req.user){
         res.render('index.ejs');
       }else{
-        res.render("profile.ejs",{
+        res.render("home.ejs",{
           user:req.user
         });
       }
@@ -50,6 +50,13 @@ module.exports = function(app, passport) {
         });
     });
 
+    // PROJECT SECTION =========================
+    app.get('/rate', isLoggedIn, function(req, res) {
+        res.render('general/rate.ejs', {
+            user : req.user
+        });
+    });
+
 
     // LOGOUT ==============================
     app.get('/logout', function(req, res) {
@@ -70,7 +77,7 @@ module.exports = function(app, passport) {
 
         // process the login form
         app.post('/login', passport.authenticate('local-login', {
-            successRedirect : '/profile', // redirect to the secure profile section
+            successRedirect : '/', // redirect to the secure profile section
             failureRedirect : '/login', // redirect back to the signup page if there is an error
             failureFlash : true // allow flash messages
         }));
