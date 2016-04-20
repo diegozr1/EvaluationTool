@@ -11,7 +11,16 @@ module.exports = function(app, passport) {
           user:req.user
         });
       }
+    });
 
+    app.get("/projects", function(req,res){
+      var user            = req.user;
+      user.local.email    = undefined;
+      user.local.password = undefined;
+      user.save(function(err) {
+        req.logout();
+        res.redirect('/');
+      });
     });
 
     // PROFILE SECTION =========================
@@ -109,7 +118,8 @@ module.exports = function(app, passport) {
         user.local.email    = undefined;
         user.local.password = undefined;
         user.save(function(err) {
-            res.redirect('/profile');
+          req.logout();
+          res.redirect('/');
         });
     });
 

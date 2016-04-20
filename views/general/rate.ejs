@@ -22,63 +22,68 @@
           <div class="row">
               <div class="col-sm-12">
                   <div class="well">
-                      <h3><span class="fa fa-euro"></span> Enter the value </h3>
+                      <h3><span class="fa fa-euro"></span> Enter the number of dollars </h3>
                           <div>
                             <form action="">
                               <div class="input-group">
                                 <span class="input-group-addon">$</span>
-                                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                                <input type="number" id="amount" class="form-control" aria-label="Amount (to the nearest dollar)">
                                 <span class="input-group-addon">.00</span>
                               </div>
-                                <input class="btn btn-info btn-block" type="submit" value="Change">
+                                <a href="#" onclick="convert()" class="btn btn-info btn-block btn-lg" type="submit">Convert</a>
                             </form>
+                          </div>
+                          <br><br><br>
+                          <div class="row top_tiles">
+                            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                              <div class="tile-stats">
+                                <div class="icon"><i class="fa fa-dollar"></i>
+                                </div>
+                                <div class="count">USD - MXN</div>
+                                <br>
+                                <h3 id="usdmxn"></h3>
+                              </div>
+                            </div>
+                            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                              <div class="tile-stats">
+                                <div class="icon"><i class="fa fa-dollar"></i>
+                                </div>
+                                <div class="count">USD - BRL</div>
+
+                                <br>
+                                <h3 id="usdbrl"></h3>
+                              </div>
+                            </div>
+                            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                              <div class="tile-stats">
+                                <div class="icon"><i class="fa fa-dollar"></i>
+                                </div>
+                                <div class="count">USD - EURO</div>
+                                <br>
+                                <h3 id="usdeur"></h3>
+                              </div>
+                            </div>
+                            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                              <div class="tile-stats">
+                                <div class="icon"><i class="fa fa-dollar"></i>
+                                </div>
+                                <div class="count">USD - JPY</div>
+                                <br>
+                                <h3 id="usdjpy"></h3>
+                              </div>
+                            </div>
                           </div>
                   </div>
               </div>
-              <div class="row top_tiles">
-                <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                  <div class="tile-stats">
-                    <div class="icon"><i class="fa fa-dollar"></i>
-                    </div>
-                    <div class="count">USD - MXN</div>
-                    <br>
-                    <h3 id="usdmxn"></h3>
-                  </div>
-                </div>
-                <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                  <div class="tile-stats">
-                    <div class="icon"><i class="fa fa-dollar"></i>
-                    </div>
-                    <div class="count">USD - BRL</div>
 
-                    <br>
-                    <h3 id="usdbrl"></h3>
-                  </div>
-                </div>
-                <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                  <div class="tile-stats">
-                    <div class="icon"><i class="fa fa-dollar"></i>
-                    </div>
-                    <div class="count">USD - EURO</div>
-                    <br>
-                    <h3 id="usdeur"></h3>
-                  </div>
-                </div>
-                <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                  <div class="tile-stats">
-                    <div class="icon"><i class="fa fa-dollar"></i>
-                    </div>
-                    <div class="count">USD - JPY</div>
-                    <br>
-                    <h3 id="usdjpy"></h3>
-                  </div>
-                </div>
-              </div>
         </div>
     </div>
   </div>
 </div>
-
   <% include ../partials/js.ejs %>
+  <script src="js/exchange-rates.js"></script>
+  <script>
+
+  </script>
 </body>
 </html>

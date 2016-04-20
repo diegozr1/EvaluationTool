@@ -1,6 +1,7 @@
 {
   "name": "node-authentication",
   "main": "server.js",
+  "author" : "Diego Zamora Rodriguez <diego.zamora171@gmail.com>",
   "dependencies" : {
     "express" : "~4.0.0",
     "ejs" : "~0.8.5",

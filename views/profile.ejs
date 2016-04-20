@@ -90,20 +90,6 @@
 
   <% include partials/js.ejs %>
 
-  <script>
-  $(document).ready(function(){
-  		$.getJSON("https://api.coinbase.com/v2/exchange-rates",function(result){
-        $("#usdmxn").append(result.data.rates['MXN'] + " ");
-        $("#usdbrl").append(result.data.rates['BRL'] + " ");
-        $("#usdeur").append(result.data.rates['EUR'] + " ");
-        $("#usdjpy").append(result.data.rates['JPY'] + " ");
-        /*
-        $.each(result.data.rates['MXN'], function(i, field){
-          //$("#usdmxn").append(JSON.stringify(field) + " ");
-        });
-        */
-      });
-  });
-  </script>
+  <script src="js/exchange-rates.js"></script>
 </body>
 </html>

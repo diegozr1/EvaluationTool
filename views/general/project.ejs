@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <% include ../partials/head %>
+</head>
+<body class="nav-md">
+<div class="container body">
+  <div class="main_container">
+
+
+  <% include ../partials/sidebar %>
+
+  <% include ../partials/topmenu %>
+
+
+    <div class="right_col" role="main">
+
+        <div class="page-header text-center">
+          <br><br>
+          <h1><span class="fa fa-edit"></span> Project Screening Matrix </h1>
+        </div>
+
+          <div class="row">
+              <div class="col-sm-12">
+                  <div class="well">
+                      <h3><span class="fa fa-cubes"></span> Your projects</h3>
+                          <p>
+                              <strong>Name</strong>: <%= user.local.projects %><br>
+                          </p>
+                  </div>
+              </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+  <% include ../partials/js.ejs %>
+</body>
+</html>
