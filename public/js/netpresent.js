@@ -19,12 +19,12 @@ function mostrar() {
 }
 
 function agregar(limite,bandera){
-    var codigo='<div class="row" ><div class="col-md-1" style="text-align:center;">PERIOD</div><div class="col-md-3" style="text-align:center;">OUTFLOWS</div><div class="col-md-3" style="text-align:center;">INFLOWS</div><div class="col-md-3" style="text-align:center;">NET CASH FLOW</div><div class="col-md-2" style="text-align:center;">COMULATIVE CASH FLOW</div></div>';
+    var codigo='<div class="row" ><div class="col-md-1" style="text-align:center;">PERIOD</div><div class="col-md-3" style="text-align:center;">OUTFLOWS</div><div class="col-md-3" style="text-align:center;">INFLOWS</div><div class="col-md-3" style="text-align:center;">NET CASH FLOW</div><div class="col-md-2" style="text-align:center;">CUMULATIVE CASH FLOW</div></div>';
     if(bandera){
-        codigo +='<div class="row"  id ="linea0" ><div class="col-md-1" style="text-align:center;">0</div><input type="number" class="col-md-3" id="outflow0"><input type="number" class="col-md-3" id="inflow0"><input type="number" class="col-md-3" id="netcash0" disabled><input type="number" class="col-md-2" id="comulativecash0" disabled></div><br>';
+        codigo +='<div class="row"  id ="linea0" ><div class="col-md-1" style="text-align:center;">0</div><input type="number" class="col-md-3" id="outflow0"><input type="number" class="col-md-3" id="inflow0"><input type="number" class="col-md-3" id="netcash0" disabled><input type="number" class="col-md-2" id="cumulativecash0" disabled></div><br>';
     }
     for(i=1;i<limite+1;i++){
-        codigo += '<div class="row"  id ="linea'+i+'" ><div class="col-md-1" style="text-align:center;">'+i+'</div><input type="number" class="col-md-3" id="outflow'+i+'"><input type="number" class="col-md-3" id="inflow'+i+'"><input type="number" class="col-md-3" id="netcash'+i+'" disabled><input type="number" class="col-md-2" id="comulativecash'+i+'" disabled></div><br>';
+        codigo += '<div class="row"  id ="linea'+i+'" ><div class="col-md-1" style="text-align:center;">'+i+'</div><input type="number" class="col-md-3" id="outflow'+i+'"><input type="number" class="col-md-3" id="inflow'+i+'"><input type="number" class="col-md-3" id="netcash'+i+'" disabled><input type="number" class="col-md-2" id="cumulativecash'+i+'" disabled></div><br>';
     }
     codigo += '<div class="row"  id ="linea'+i+'" ><div class="col-md-4" style="text-align:center;"><button type="button" class="btn btn-default" onclick="imprimirresultados()" >Imprimir resultados</button></div><div class="col-md-1" ></div><input type="number" class="col-md-5" id="netpresentvalue" disabled><div class="col-md-1" ></div></div><br>';
     $("#contenedor").html(codigo);
@@ -44,7 +44,7 @@ function valores() {
     netCashFlows.push(net);
     // Set Net y cumulative de period 0.
     $("#netcash0").val(net);
-    $("#comulativecash0").val(cum);
+    $("#cumulativecash0").val(cum);
 
     // Recorrer desde 1 hasta length.
     for (var i = 1; i < length + 1; i++) {
@@ -67,7 +67,7 @@ function valores() {
 
         // Set net and cumulative.
         $('#netcash' + i).val(net);
-        $('#comulativecash' + i).val(cum);
+        $('#cumulativecash' + i).val(cum);
     }
     return netCashFlows;
 }
