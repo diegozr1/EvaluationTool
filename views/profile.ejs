@@ -28,7 +28,7 @@
         </div>
         <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
           <div class="tile-stats">
-            <div class="icon"><i class="fa fa-dollar"></i>
+            <div class="icon"><i class="fa fa-gbp"></i>
             </div>
             <div class="count">USD - BRL</div>
 
@@ -38,7 +38,7 @@
         </div>
         <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
           <div class="tile-stats">
-            <div class="icon"><i class="fa fa-dollar"></i>
+            <div class="icon"><i class="fa fa-eur"></i>
             </div>
             <div class="count">USD - EURO</div>
             <br>
@@ -47,7 +47,7 @@
         </div>
         <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
           <div class="tile-stats">
-            <div class="icon"><i class="fa fa-dollar"></i>
+            <div class="icon"><i class="fa fa-jpy"></i>
             </div>
             <div class="count">USD - JPY</div>
             <br>
@@ -56,22 +56,22 @@
         </div>
       </div>
 
-
-
         <div class="page-header text-center">
             <h1><span class="fa fa-user"></span> Profile </h1>
         </div>
-
-
           <div class="row">
               <div class="col-sm-6">
                   <div class="well">
-                      <h3><span class="fa fa-server"></span> Personal info</h3>
+                      <h3><span class="fa fa-rocket"></span> Personal info</h3>
                           <p>
                               <strong>Name</strong>: <%= user.local.name %><br>
                           </p>
                           <p>
                               <strong>Email</strong>: <%= user.local.email %><br>
+                          </p>
+                          <p>
+                            <br>
+                            <a href="/unlink/local" class="btn btn-danger btn-block"><span class="fa fa-lock"></span> Delete account</a>
                           </p>
                   </div>
               </div>
@@ -89,7 +89,6 @@
 </div>
 
   <% include partials/js.ejs %>
-
   <script src="js/exchange-rates.js"></script>
 </body>
 </html>

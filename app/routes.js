@@ -115,8 +115,10 @@ module.exports = function(app, passport) {
     // local -----------------------------------
     app.get('/unlink/local', isLoggedIn, function(req, res) {
         var user            = req.user;
+        user.local.name     = undefined;
         user.local.email    = undefined;
         user.local.password = undefined;
+        user.local.projects = undefined;
         user.save(function(err) {
           req.logout();
           res.redirect('/');
