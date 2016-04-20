@@ -26,7 +26,7 @@ function agregar(limite,bandera){
   for(i=1;i<limite+1;i++){
     codigo += '<div class="row"  id ="linea'+i+'" ><div class="col-md-1" style="text-align:center;">'+i+'</div><input type="number" class="col-md-4" id="outflow'+i+'"><input type="number" class="col-md-4" id="inflow'+i+'"><input type="number" class="col-md-3" id="comulativecash'+i+'" disabled></div><br>';
   }
-  codigo+='<div class="row"  id ="linea'+i+'" ><div class="col-md-4" style="text-align:center;"><button type="button" class="btn btn-default" onclick="imprimirresultados()" >Imprimir resultados</button></div><div class="col-md-1" ></div><input type="number" class="col-md-5" id="netpresentvalue" disabled><div class="col-md-1" ></div></div><br>'
+  codigo+='<div class="row"  id ="linea'+i+'" ><div class="col-md-4" style="text-align:center;"><button type="button" class="btn btn-default" onclick="imprimirresultados()">Show payback period</button></div><div class="col-md-1" ></div><input type="number" class="col-md-5" id="netpresentvalue" disabled><div class="col-md-1" ></div></div><br>'
   $("#contenedor").html(codigo);
 }
 
@@ -36,7 +36,7 @@ function valores(){
     var length = parseInt($("#droplistbox").val());
     var inflow = parseFloat($("#inflow0").val());
     var outflow = parseFloat($("#outflow0").val());
-    
+
     if (isNaN(inflow)) {
       inflow = 0;
     }
@@ -58,11 +58,11 @@ function valores(){
 
     // Recorrer desde 1 hasta length.
     for (var i = 1; i < length + 1; i++) {
-    
+
         // Calcular net (inflow - outflow)
         inflow = parseFloat($('#inflow' + i).val());
         outflow = parseFloat($('#outflow' + i).val());
-        
+
         if (isNaN(inflow)) {
           inflow = 0;
         }
@@ -71,7 +71,7 @@ function valores(){
           outflow = 0;
         }
 
-        
+
         //console.log(inflow);
         //console.log(outflow);
 
