@@ -110,8 +110,11 @@ function tWeightT(n){
 }
 
 function finalWeightp(){
-
-  var codigo = '<p>'+(tWeightP(4)/100*parseFloat($('#tWeighti').val()).toFixed(2))+'</p>';
+  var codigo = '<p>'+(tWeightP(4)/100*parseFloat($('#pWeighti').val()).toFixed(2))+'</p>';
+  $("#fValue1").html(codigo);
+  var codigo = '<p>'+(tWeightS(10)/100*parseFloat($('#sWeighti').val()).toFixed(2))+'</p>';
+  $("#fValue2").html(codigo);
+  var codigo = '<p>'+(tWeightT(8)/100*parseFloat($('#tWeighti').val()).toFixed(2))+'</p>';
   $("#fValue3").html(codigo);
 }
 
@@ -119,7 +122,7 @@ function showWeight(){
 
   finalWeightp()
 
-  tWeightS(10)
 
-  tWeightT(8)
+
+
 }
