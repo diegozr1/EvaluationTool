@@ -127,7 +127,7 @@ function finalWeightp(){
   if(isNaN((tWeightS(10)/100*parseFloat($('#sWeighti').val()).toFixed(2)))){
     var codigo = 0;
   }else {
-    total+=(tWeightS(4)/100*parseFloat($('#sWeighti').val()))
+    total+=(tWeightS(10)/100*parseFloat($('#sWeighti').val()))
     totalInit+=parseFloat($('#sWeighti').val());
     var codigo = '<p>'+(tWeightS(10)/100*parseFloat($('#sWeighti').val()).toFixed(2))+'</p>';
     var codigoInit = '<p>'+parseFloat($('#sWeighti').val()).toFixed(2)+'</p>'
@@ -138,7 +138,7 @@ function finalWeightp(){
   if(isNaN((tWeightT(8)/100*parseFloat($('#tWeighti').val())).toFixed(2))){
     var codigo = 0;
   }else {
-    total+=(tWeightT(4)/100*parseFloat($('#tWeighti').val()))
+    total+=(tWeightT(8)/100*parseFloat($('#tWeighti').val()))
     totalInit+=parseFloat($('#tWeighti').val());
     var codigo = '<p>'+(tWeightT(8)/100*parseFloat($('#tWeighti').val())).toFixed(2)+'</p>';
     var codigoInit = '<p>'+parseFloat($('#tWeighti').val()).toFixed(2)+'</p>'
