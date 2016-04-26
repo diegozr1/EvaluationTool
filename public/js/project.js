@@ -55,7 +55,7 @@ function tWeightS(n){
   for (var i = 1; i < n + 1; i++) {
 
     total1 = total1 + parseFloat($('#sValue' + i).val());
-    total = total + weightP(i);
+    total = total + weightS(i);
 
   }
   var codigo = '<p>'+total+'</p>';
@@ -93,7 +93,7 @@ function tWeightT(n){
   for (var i = 1; i < n + 1; i++) {
 
     total1 = total1 + parseFloat($('#tValue' + i).val());
-    total = total + weightP(i);
+    total = total + weightT(i);
 
   }
   var codigo = '<p>'+total+'</p>';
