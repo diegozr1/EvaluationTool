@@ -1,10 +1,16 @@
 function weightP(n){
   var rating = parseFloat($('#pRating' + n).val());
   var weight = parseFloat($('#pWheight' + n).val());
-  var codigo = '<p>'+weight/5*rating+'</p>';
+
+  if(isNaN(weight/5*rating)){ // check if the number in the textbox is zero
+    var codigo = '<p>'+0+'</p>';
+  }else{
+    var codigo = '<p>'+weight/5*rating+'</p>';
+  }
   $('#pValue'+n).html(codigo);
   return weight/5*rating
 }
+
 function tWeightP(n){
   var total = 0;
   var total1 = 0;
@@ -21,8 +27,17 @@ function tWeightP(n){
 function weightS(n){
   var rating = parseFloat($('#sRating' + n).val());
   var weight = parseFloat($('#sWheight' + n).val());
-  var codigo = '<p>'+weight/5*rating+'</p>';
-  $('#sValue'+n).html(codigo);
+  if(isNaN(weight/5*rating)){ // check if the number in the textbox is zero
+    var codigo = '<p>'+0+'</p>';
+    $('#sValue'+n).html(codigo);
+    return 0
+  }else{
+    var codigo = '<p>'+weight/5*rating+'</p>';
+    $('#sValue'+n).html(codigo);
+    return weight/5*rating
+  }
+  //var codigo = '<p>'+weight/5*rating+'</p>';
+
 
 }
 
@@ -31,22 +46,32 @@ function tWeightS(n){
   var total1 = 0;
   for (var i = 1; i < n + 1; i++) {
 
-    total = total + parseFloat($('#sValue' + i).val());
-    total1 = total1 + parseFloat($('#sWheight' + i).val());
+    total1 = total1 + parseFloat($('#sValue' + i).val());
+    total = total + weightP(i);
 
   }
   var codigo = '<p>'+total+'</p>';
   var codigo1 = '<p>'+total1+'</p>';
 
-  $("#tsWheight2").html(codigo1);
-  $("#tsValue2").html(codigo);
+  $("#tsWheight2").html(codigo);
+  $("#tsValue2").html(codigo1);
+
 }
 
 function weightT(n){
   var rating = parseFloat($('#tRating' + n).val());
   var weight = parseFloat($('#tWheight' + n).val());
-  var codigo = '<p>'+weight/5*rating+'</p>';
-  $('#tValue'+n).html(codigo);
+  if(isNaN(weight/5*rating)){ // check if the number in the textbox is zero
+    var codigo = '<p>'+0+'</p>';
+    $('#tValue'+n).html(codigo);
+    return 0
+  }else{
+    var codigo = '<p>'+weight/5*rating+'</p>';
+    $('#tValue'+n).html(codigo);
+    return weight/5*rating
+  }
+  //var codigo = '<p>'+weight/5*rating+'</p>';
+
 
 }
 
@@ -55,15 +80,15 @@ function tWeightT(n){
   var total1 = 0;
   for (var i = 1; i < n + 1; i++) {
 
-    total = total + parseFloat($('#tValue' + i).val());
-    total1 = total1 + parseFloat($('#tWheight' + i).val());
+    total1 = total1 + parseFloat($('#tValue' + i).val());
+    total = total + weightP(i);
 
   }
   var codigo = '<p>'+total+'</p>';
   var codigo1 = '<p>'+total1+'</p>';
 
-  $("#ttWheight3").html(codigo1);
-  $("#ttValue3").html(codigo);
+  $("#ttWheight3").html(codigo);
+  $("#ttValue3").html(codigo1);
 }
 
 function showWeight(){
