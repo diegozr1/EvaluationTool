@@ -148,6 +148,15 @@ function finalWeightp(){
   $("#cI").html(codigoInit);
   $("#gI").html('<p>'+totalInit.toFixed(2)+'<p>');
   $("#gF").html('<p>'+total.toFixed(2)+'<p>');
+
+  if(total>=65){
+    $("#de").html('<div style="background-color:green;">'+Yes+'</div>');
+  }else if (total >=50) {
+    $("#de").html('<p style="background-color:yellow;">'+Can Consider+'</p>');
+  }else{
+    $("#de").html('<p style="background-color:red;">'+No+'</p>');
+  }
+
 }
 
 function showWeight(){
