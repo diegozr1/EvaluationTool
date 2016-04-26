@@ -110,14 +110,14 @@ function tWeightT(n){
 }
 
 function finalWeightp(){
-  
-  var codigo = '<p>'+(tWeightP(4)/100*parseFloat($('#tWeighti').val()).toFixed(2)+'</p>';
+
+  var codigo = '<p>'+(tWeightP(4)/100*parseFloat($('#tWeighti').val()).toFixed(2))+'</p>';
   $("#fValue3").html(codigo);
 }
 
 function showWeight(){
 
-
+  finalWeightp()
 
   tWeightS(10)
 
