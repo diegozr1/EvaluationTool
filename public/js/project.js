@@ -116,10 +116,10 @@ function finalWeightp(){
   if(isNaN((tWeightP(4)/100*parseFloat($('#pWeighti').val())).toFixed(2))){
     var codigo = 0;
   }else {
-    total+=(tWeightP(4)/100*parseFloat($('#pWeighti').val())).toFixed(2)
+    total+=(tWeightP(4)/100*parseFloat($('#pWeighti').val()))
     totalInit+=parseFloat($('#pWeighti').val());
     var codigo = '<p>'+(tWeightP(4)/100*parseFloat($('#pWeighti').val())).toFixed(2)+'</p>';
-    var codigoInit = '<p>'+parseFloat($('#pWeighti').val())+'</p>'
+    var codigoInit = '<p>'+parseFloat($('#pWeighti').val()).toFixed(2)+'</p>'
   }
   $("#fValue1").html(codigo);
   $("#aF").html(codigo);
@@ -127,10 +127,10 @@ function finalWeightp(){
   if(isNaN((tWeightS(10)/100*parseFloat($('#sWeighti').val()).toFixed(2)))){
     var codigo = 0;
   }else {
-    total+=(tWeightS(4)/100*parseFloat($('#sWeighti').val())).toFixed(2)
+    total+=(tWeightS(4)/100*parseFloat($('#sWeighti').val()))
     totalInit+=parseFloat($('#sWeighti').val());
     var codigo = '<p>'+(tWeightS(10)/100*parseFloat($('#sWeighti').val()).toFixed(2))+'</p>';
-    var codigoInit = '<p>'+parseFloat($('#sWeighti').val())+'</p>'
+    var codigoInit = '<p>'+parseFloat($('#sWeighti').val()).toFixed(2)+'</p>'
   }
     $("#fValue2").html(codigo);
     $("#bF").html(codigo);
@@ -138,16 +138,16 @@ function finalWeightp(){
   if(isNaN((tWeightT(8)/100*parseFloat($('#tWeighti').val())).toFixed(2))){
     var codigo = 0;
   }else {
-    total+=(tWeightT(4)/100*parseFloat($('#tWeighti').val())).toFixed(2)
+    total+=(tWeightT(4)/100*parseFloat($('#tWeighti').val()))
     totalInit+=parseFloat($('#tWeighti').val());
     var codigo = '<p>'+(tWeightT(8)/100*parseFloat($('#tWeighti').val())).toFixed(2)+'</p>';
-    var codigoInit = '<p>'+parseFloat($('#tWeighti').val())+'</p>'
+    var codigoInit = '<p>'+parseFloat($('#tWeighti').val()).toFixed(2)+'</p>'
   }
   $("#fValue3").html(codigo);
   $("#cF").html(codigo);
-  $("#bI").html(codigoInit);
-  $("#gI").html('<p>'+totalInit+'<p>');
-  $("#gF").html('<p>'+total+'<p>');
+  $("#cI").html(codigoInit);
+  $("#gI").html('<p>'+totalInit.toFixed(2)+'<p>');
+  $("#gF").html('<p>'+total.toFixed(2)+'<p>');
 }
 
 function showWeight(){
