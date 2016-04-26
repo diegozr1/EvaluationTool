@@ -42,7 +42,8 @@ function weightS(n){
   }else{
     var codigo = '<p>'+weight/5*rating+'</p>';
     $('#sValue'+n).html(codigo);
-    return weight/5*rating
+    return 2
+    //weight/5*rating
   }
   //var codigo = '<p>'+weight/5*rating+'</p>';
 
@@ -103,8 +104,8 @@ function tWeightT(n){
     var codigo1 = '<p>'+total1+'</p>';
   }
 
-  $("#Ttwheight").html(codigo1);
-  $("#ttValue3").html(codigo);
+  $("#Ttwheight").html(codigo);
+  $("#ttValue3").html(codigo1);
 }
 
 function showWeight(){
