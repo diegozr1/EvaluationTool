@@ -65,7 +65,7 @@ function tWeightS(n){
     var codigo1 = '<p>'+total1+'</p>';
   }
 
-  $("#tsWheight2").html(codigo);
+  $("#Tswheight").html(codigo);
   $("#tsValue2").html(codigo1);
 
 }
@@ -103,7 +103,7 @@ function tWeightT(n){
     var codigo1 = '<p>'+total1+'</p>';
   }
 
-  $("#ttWheight3").html(codigo);
+  $("#Ttwheight").html(codigo);
   $("#ttValue3").html(codigo1);
 }
 
