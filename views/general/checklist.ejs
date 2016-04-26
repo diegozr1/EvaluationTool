@@ -23,16 +23,554 @@
           <div class="row">
               <div class="col-sm-12">
                   <div class="well">
-                      <h3><span class="fa fa-cubes"></span> Your projects</h3>
-                          <p>
-                              <strong>Name</strong>: <%= user.local.projects %><br>
-                          </p>
+                    <h2>Primary Considerations</h2>
+                    <div class="container">
+                      <a href="#demo" class="btn btn-info" data-toggle="collapse">Show Primary Considerations</a>
+                      <div id="demo" class="collapse">
+
+                        <div class="col-sm-12">
+                          <label for="usr">Time constraints for project delivery</label>
+                          <div class="form-group">
+                            <p></p>
+                            <div class="col-sm-4">
+                              <label for="comment">Weighting</label>
+                              <input type="number" id="Weighting1" value = 0>
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="form-control" id="sel1">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <label for="usr">Status of environmental approvals</label>
+                          <div class="form-group">
+                            <p></p>
+                            <div class="col-sm-4">
+                              <label for="comment">Weighting</label>
+                              <input type="number" id="Weighting2" value = 0>
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="form-control" id="sel2">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <label for="usr">Availability of funding</label>
+                          <div class="form-group">
+                            <p></p>
+                            <div class="col-sm-4">
+                              <label for="comment">Weighting</label>
+                              <input type="number" id="Weighting3" value = 0>
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="form-control" id="sel3">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <label for="usr">Well defined scope</label>
+                          <div class="form-group">
+                            <p></p>
+                            <div class="col-sm-4">
+                              <label for="comment">Weighting</label>
+                              <input type="number" id="Weighting4" value = 0>
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="form-control" id="sel4">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <p></p>
+
+                    <h2>Secondary Considerations</h2>
+                    <div class="container">
+                      <a href="#collapseSecondary" class="btn btn-info" data-toggle="collapse">Show Secondary Considerations</a>
+                      <div id="collapseSecondary" class="collapse">
+
+                        <div class="col-sm-12">
+                          <label for="usr">Overall project complexity</label>
+                          <div class="form-group">
+                            <p></p>
+                            <div class="col-sm-4">
+                              <label for="comment">Weighting</label>
+                              <input type="number" id="Weighting5" value = 0>
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="form-control" id="sel5">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <label for="usr">Complexity of performance requirements</label>
+                          <div class="form-group">
+                            <p></p>
+                            <div class="col-sm-4">
+                              <label for="comment">Weighting</label>
+                              <input type="number" id="Weighting6" value = 0>
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="form-control" id="sel6">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <label for="usr">Project size</label>
+                          <div class="form-group">
+                            <p></p>
+                            <div class="col-sm-4">
+                              <label for="comment">Weighting</label>
+                              <input type="number" id="Weighting7" value = 0>
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="form-control" id="sel7">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <label for="usr">Availability of qualified teams</label>
+                          <div class="form-group">
+                            <p></p>
+                            <div class="col-sm-4">
+                              <label for="comment">Weighting</label>
+                              <input type="number" id="Weighting8" value = 0>
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="form-control" id="sel8">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <label for="usr">Owner experience and resources</label>
+                          <div class="form-group">
+                            <p></p>
+                            <div class="col-sm-4">
+                              <label for="comment">Weighting</label>
+                              <input type="number" id="Weighting9" value = 0>
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="form-control" id="sel9">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <label for="usr">Cost of project</label>
+                          <div class="form-group">
+                            <p></p>
+                            <div class="col-sm-4">
+                              <label for="comment">Weighting</label>
+                              <input type="number" id="Weighting10" value = 0>
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="form-control" id="sel10">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <label for="usr">Degree of team collaboration</label>
+                          <div class="form-group">
+                            <p></p>
+                            <div class="col-sm-4">
+                              <label for="comment">Weighting</label>
+                              <input type="number" id="Weighting11" value = 0>
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="form-control" id="sel11">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <label for="usr">Number of contracts</label>
+                          <div class="form-group">
+                            <p></p>
+                            <div class="col-sm-4">
+                              <label for="comment">Weighting</label>
+                              <input type="number" id="Weighting12" value = 0>
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="form-control" id="sel12">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <label for="usr">Allocation of risks</label>
+                          <div class="form-group">
+                            <p></p>
+                            <div class="col-sm-4">
+                              <label for="comment">Weighting</label>
+                              <input type="number" id="Weighting13" value = 0>
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="form-control" id="sel13">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <label for="usr">Interest in innovation</label>
+                          <div class="form-group">
+                            <p></p>
+                            <div class="col-sm-4">
+                              <label for="comment">Weighting</label>
+                              <input type="number" id="Weighting14" value = 0>
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="form-control" id="sel14">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+                    <p></p>
+                    <h2>Other Considerations</h2>
+                    <div class="container">
+                      <a href="#collapseOther" class="btn btn-info" data-toggle="collapse">Show Other Considerations</a>
+                      <div id="collapseOther" class="collapse">
+
+                        <div class="col-sm-12">
+                          <label for="usr">Data Security</label>
+                          <div class="form-group">
+                            <p></p>
+                            <div class="col-sm-4">
+                              <label for="comment">Weighting</label>
+                              <input type="number" id="Weighting15" value = 0>
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="form-control" id="sel15">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <label for="usr">Operational constraints</label>
+                          <div class="form-group">
+                            <p></p>
+                            <div class="col-sm-4">
+                              <label for="comment">Weighting</label>
+                              <input type="number" id="Weighting16" value = 0>
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="form-control" id="sel16">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <label for="usr">Utility relocations</label>
+                          <div class="form-group">
+                            <p></p>
+                            <div class="col-sm-4">
+                              <label for="comment">Weighting</label>
+                              <input type="number" id="Weighting17" value = 0>
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="form-control" id="sel17">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <label for="usr">QC/QA responsibilities</label>
+                          <div class="form-group">
+                            <p></p>
+                            <div class="col-sm-4">
+                              <label for="comment">Weighting</label>
+                              <input type="number" id="Weighting18" value = 0>
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="form-control" id="sel18">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <label for="usr">Performance guarantees/warranties</label>
+                          <div class="form-group">
+                            <p></p>
+                            <div class="col-sm-4">
+                              <label for="comment">Weighting</label>
+                              <input type="number" id="Weighting19" value = 0>
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="form-control" id="sel19">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <label for="usr">Design reviews/approvals</label>
+                          <div class="form-group">
+                            <p></p>
+                            <div class="col-sm-4">
+                              <label for="comment">Weighting</label>
+                              <input type="number" id="Weighting20" value = 0>
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="form-control" id="sel20">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <label for="usr">Legal frame or requirements </label>
+                          <div class="form-group">
+                            <p></p>
+                            <div class="col-sm-4">
+                              <label for="comment">Weighting</label>
+                              <input type="number" id="Weighting21" value = 0>
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="form-control" id="sel21">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                          <label for="usr">Ownership of intellectual property</label>
+                          <div class="form-group">
+                            <p></p>
+                            <div class="col-sm-4">
+                              <label for="comment">Weighting</label>
+                              <input type="number" id="Weighting22" value = 0>
+                            </div>
+                            <div class="col-sm-4">
+                              <select class="form-control" id="sel22">
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <h2>Sub Totals</h2>
+                    <div class="panel panel-default">
+                        <div class="col-sm-4">
+                       <label for="usr">Pimary Considerations: </label>
+                            <div class="col-sm-4">
+                              <label for="comment">Weighting</label>
+                              <input type="number" id="WeightingPrimary" value = 0>
+                              <label for="comment">Total</label>
+                              <input type="text" id="SumWeightingPrimary" disabled="disabled" value = 0>
+                            </div>
+                        </div>
+                       <p></p>
+                        <div class="col-sm-4">
+                       <label for="usr">Secondary Considerations: </label>
+                            <div class="col-sm-4">
+                              <label for="comment">Weighting</label>
+                              <input type="number" id="WeightingSecondary" value = 0>
+                              <label for="comment">Total</label>
+                              <input type="text" id="SumWeightingSecondary" disabled="disabled" value = 0>
+                            </div>
+                        </div>
+                       <p></p>
+                        <div class="col-sm-4">
+                       <label for="usr">Other Considerations: </label>
+                            <div class="col-sm-4">
+                              <label for="comment">Weighting</label>
+                              <input type="number" id="WeightingOther" value = 0>
+                              <label for="comment">Total</label>
+                              <input type="text" id="SumWeightingOther" disabled="disabled" value = 0>
+                            </div>
+                        </div>
+                       <p></p>
+                        <div class="col-sm-4">
+                       <label for="usr">Grand Total: </label>
+                              <input type="text" id="SumFinalT" disabled="disabled" value = 0>
+                        </div>
+                     </div>
+                   </div>
+
+                        <div class="col-sm-4">
+                    <button onclick="calcularFunction()">Calcular</button>
+                        </div>
+                       <p></p>
+
+                   <div class="panel panel-default">
+                    <div class="panel-body">
+                      <label for="usr">Decision: </label>
+                              <input type="text" id="txtDesicionFinal" disabled="disabled" value = "No aceptado">
+                    </div>
+                  </div>
+
                   </div>
               </div>
         </div>
     </div>
   </div>
 </div>
+
+
+<script>
+  function calcularFunction(){
+    var sumPrimary = 0.0;
+    var sumSecondary = 0.0;
+    var sumOther = 0.0;
+    var sumGrandT = 0.0;
+    var sumWeightPri = 0.0;
+    var sumWeightSec = 0.0;
+    var sumWeightOther = 0.0;
+    var sumGrandT = 0.0;
+    var x = 0.0; //toma el valor del Weighting actual
+
+    for (var i=1; i<=22; i++){
+
+      x = document.getElementById("Weighting"+i.toString()).value;
+
+      if(i<=4){
+        sumWeightPri += Number(x);
+      }
+      else if(i>=5 && i<=14){
+        sumWeightSec += Number(x);
+      }
+      else{
+        sumWeightOther += Number(x);
+      }
+
+      if(document.getElementById("sel"+i.toString()).value === "Low"){
+        x = Number(x*0.20);
+      }
+      else if(document.getElementById("sel"+i.toString()).value === "Medium"){
+        x = Number(x*0.60);
+      }
+      else{
+        x = Number(x);
+      }
+      if(i<=4){
+        sumPrimary += Number(x);
+      }
+      else if(i>=5 && i<=14){
+        sumSecondary += Number(x);
+      }
+      else{
+        sumOther += Number(x);
+      }
+    }
+sumPrimary = 80;
+sumSecondary =84;
+sumOther = 36;
+   document.getElementById("SumWeightingPrimary").value = sumPrimary;
+   document.getElementById("SumWeightingSecondary").value = sumSecondary;
+   document.getElementById("SumWeightingOther").value = sumOther;
+
+   sumGrandT = (Number(sumPrimary*document.getElementById("WeightingPrimary").value) + Number(sumSecondary*document.getElementById("WeightingSecondary").value) + Number(sumOther*document.getElementById("WeightingOther").value))/100;
+
+   document.getElementById("SumFinalT").value = sumGrandT;
+
+   if(sumGrandT <50){
+   document.getElementById("txtDesicionFinal").value = "Not accepted";
+  }
+   else if(sumGrandT>=50 && sumGrandT<65){
+   document.getElementById("txtDesicionFinal").value = "Can consider";
+  }
+   else
+   {
+     document.getElementById("txtDesicionFinal").value = "Accepted";
+   }
+}
+</script>
 
   <% include ../partials/js.ejs %>
 </body>
