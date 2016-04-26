@@ -150,13 +150,13 @@ function finalWeightp(){
   $("#gF").html('<p>'+total.toFixed(2)+'<p>');
 
   if(total>=65){
-    $("#de").html('<div style="background-color:green;">Yes</div>');
+    $("#de").html('<div class="alert alert-success" role="alert">Yes</div>');
   }
   else if (total >=50) {
-    $("#de").html('<p style="background-color:yellow;">Can Consider</p>');
+    $("#de").html('<div class="alert alert-warning">Can Consider</div>');
   }
   else{
-    $("#de").html('<p style="background-color:red;">No</p>');
+    $("#de").html('<div class="alert alert-danger">No</div>');
   }
 
 }
