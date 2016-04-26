@@ -112,13 +112,7 @@ function showWeight(){
 
   tWeightP(4)
 
-  for (var i = 1; i <= 10; i++) {
-    weightS(i);
-  }
   tWeightS(10)
 
-  for (var i = 1; i <= 8; i++) {
-    weightT(i);
-  }
   tWeightT(8)
 }
