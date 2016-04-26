@@ -117,7 +117,7 @@ function finalWeightp(){
     var codigo = 0;
   }else {
     total+=(tWeightP(4)/100*parseFloat($('#pWeighti').val())).toFixed(2)
-    totalInit+=parseFloat($('#pWeighti')).val();
+    totalInit+=parseFloat($('#pWeighti').val());
     var codigo = '<p>'+(tWeightP(4)/100*parseFloat($('#pWeighti').val())).toFixed(2)+'</p>';
     var codigoInit = '<p>'+parseFloat($('#pWeighti').val())+'</p>'
   }
@@ -128,7 +128,7 @@ function finalWeightp(){
     var codigo = 0;
   }else {
     total+=(tWeightS(4)/100*parseFloat($('#sWeighti').val())).toFixed(2)
-    totalInit+=parseFloat($('#sWeighti')).val();
+    totalInit+=parseFloat($('#sWeighti').val());
     var codigo = '<p>'+(tWeightS(10)/100*parseFloat($('#sWeighti').val()).toFixed(2))+'</p>';
     var codigoInit = '<p>'+parseFloat($('#sWeighti').val())+'</p>'
   }
@@ -139,7 +139,7 @@ function finalWeightp(){
     var codigo = 0;
   }else {
     total+=(tWeightT(4)/100*parseFloat($('#tWeighti').val())).toFixed(2)
-    totalInit+=parseFloat($('#tWeighti')).val();
+    totalInit+=parseFloat($('#tWeighti').val());
     var codigo = '<p>'+(tWeightT(8)/100*parseFloat($('#tWeighti').val())).toFixed(2)+'</p>';
     var codigoInit = '<p>'+parseFloat($('#tWeighti').val())+'</p>'
   }
