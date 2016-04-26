@@ -446,10 +446,9 @@
 
 
                     <div class="panel panel-default">
-                      <h2>Sub Totals</h2>
-                      <div class="col-sm-12">
-                        <a href="#" class="btn btn-info btn-block" onclick="calcularFunction()">Calcular</a>
-                      </div>
+                      <br>
+                        <h2 class="text-center">Sub Totals</h2>
+                      <br>
                         <div class="col-sm-4">
                            <label for="usr">Pimary Considerations: </label>
                               <div class="col-sm-4">
@@ -459,19 +458,17 @@
                                 <input type="text" id="SumWeightingPrimary" disabled="disabled" value = 0>
                               </div>
                           </div>
-                       <p></p>
                         <div class="col-sm-4">
-                       <label for="usr">Secondary Considerations: </label>
-                            <div class="col-sm-4">
-                              <label for="comment">Weighting</label>
-                              <input type="number" id="WeightingSecondary" value = 0>
-                              <label for="comment">Total</label>
-                              <input type="text" id="SumWeightingSecondary" disabled="disabled" value = 0>
-                            </div>
+                          <label for="usr">Secondary Considerations: </label>
+                          <div class="col-sm-4">
+                            <label for="comment">Weighting</label>
+                            <input type="number" id="WeightingSecondary" value = 0>
+                            <label for="comment">Total</label>
+                            <input type="text" id="SumWeightingSecondary" disabled="disabled" value = 0>
+                          </div>
                         </div>
-                       <p></p>
                         <div class="col-sm-4">
-                       <label for="usr">Other Considerations: </label>
+                           <label for="usr">Other Considerations: </label>
                             <div class="col-sm-4">
                               <label for="comment">Weighting</label>
                               <input type="number" id="WeightingOther" value = 0>
@@ -479,18 +476,20 @@
                               <input type="text" id="SumWeightingOther" disabled="disabled" value = 0>
                             </div>
                         </div>
-                       <p></p>
-                        <div class="col-sm-4">
-                       <label for="usr">Grand Total: </label>
-                              <input type="text" id="SumFinalT" disabled="disabled" value = 0>
+                        <br><br><br><br><br><br><br><br>
+                        <div class="col-sm-6">
+                         <label for="usr">Grand Total: </label>
+                         <input type="text" id="SumFinalT" disabled="disabled" value = 0>
                         </div>
+                        <div class="col-sm-6">
+                          <label for="txtDesicionFinal">Decision: </label>
+                          <input type="text" id="txtDesicionFinal" disabled="disabled" value = "No aceptado">
+                        </div><br><br><br>
+                     <div>
+                       <a href="#" class="btn btn-info btn-lg btn-block" onclick="calcularFunction()"><span class="fa fa-calculator"></span> Calculate</a>
                      </div>
-                     <div class="panel panel-default">
-                      <div class="panel-body">
-                        <label for="txtDesicionFinal">Decision: </label>
-                        <input type="text" id="txtDesicionFinal" disabled="disabled" value = "No aceptado">
-                      </div>
-                     </div>
+                     <br>
+                   </div>
                    </div>
                   </div>
               </div>
