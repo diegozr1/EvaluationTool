@@ -3,14 +3,14 @@ function weightP(n){
   var weight = parseFloat($('#pWheight' + n).val());
   var codigo = '<p>'+weight/5*rating+'</p>';
   $('#pValue'+n).html(codigo);
-
+  return weight/5*rating
 }
 function tWeightP(n){
   var total = 0;
   var total1 = 0;
   for (var i = 1; i < n + 1; i++) {
     total1 = total1 + parseFloat($('#pWheight' + i).val());
-    total = total + parseFloat($('#pValue' + i).val());
+    total = total + weightP(i);
   }
   var codigo = '<p>'+total+'</p>';
   var codigo1 = '<p>'+total1+'</p>';
@@ -67,9 +67,7 @@ function tWeightT(n){
 }
 
 function showWeight(){
-  for (var i = 1; i <= 4; i++) {
-    weightP(i);
-  }
+
   tWeightP(4)
 
   for (var i = 1; i <= 10; i++) {
