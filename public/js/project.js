@@ -30,6 +30,7 @@ function tWeightP(n){
 
   $("#tpWheight1").html(codigo1);
   $("#tpValue1").html(codigo);
+  return total.toFixed(2)
 }
 
 function weightS(n){
@@ -108,9 +109,15 @@ function tWeightT(n){
   $("#ttValue3").html(codigo1);
 }
 
+function finalWeightp(){
+  
+  var codigo = '<p>'+(tWeightP(4)/100*parseFloat($('#tWeighti').val()).toFixed(2)+'</p>';
+  $("#fValue3").html(codigo);
+}
+
 function showWeight(){
 
-  tWeightP(4)
+
 
   tWeightS(10)
 
