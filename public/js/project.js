@@ -24,9 +24,9 @@ function tWeightP(n){
   if(isNaN(total1)){
     var codigo1 = '<p>'+0+'</p>';
   }else{
-    var codigo1 = '<p>'+total1+'</p>';
+    var codigo1 = '<p>'+total1.toFixed(2)+'</p>';
   }
-  var codigo = '<p>'+total+'</p>';
+  var codigo = '<p>'+total.toFixed(2)+'</p>';
 
   $("#tpWheight1").html(codigo1);
   $("#tpValue1").html(codigo);
@@ -59,11 +59,11 @@ function tWeightS(n){
     total = total + weightS(i);
 
   }
-  var codigo = '<p>'+total+'</p>';
+  var codigo = '<p>'+total.toFixed(2)+'</p>';
   if(isNaN(total1)){
     var codigo1 = '<p>'+0+'</p>';
   }else{
-    var codigo1 = '<p>'+total1+'</p>';
+    var codigo1 = '<p>'+total1.toFixed(2)+'</p>';
   }
 
   $("#Tswheight").html(codigo1);
@@ -97,11 +97,11 @@ function tWeightT(n){
     total = total + weightT(i);
 
   }
-  var codigo = '<p>'+total+'</p>';
+  var codigo = '<p>'+total.toFixed(2)+'</p>';
   if(isNaN(total1)){
     var codigo1 = '<p>'+0+'</p>';
   }else{
-    var codigo1 = '<p>'+total1+'</p>';
+    var codigo1 = '<p>'+total1.toFixed(2)+'</p>';
   }
 
   $("#Ttwheight").html(codigo);
