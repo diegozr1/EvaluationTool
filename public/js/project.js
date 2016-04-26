@@ -38,7 +38,7 @@ function weightS(n){
   if(isNaN(weight/5*rating)){ // check if the number in the textbox is zero
     var codigo = '<p>'+0+'</p>';
     $('#sValue'+n).html(codigo);
-    return 0
+    return 1
   }else{
     var codigo = '<p>'+weight/5*rating+'</p>';
     $('#sValue'+n).html(codigo);
@@ -65,8 +65,8 @@ function tWeightS(n){
     var codigo1 = '<p>'+total1+'</p>';
   }
 
-  $("#Tswheight").html(codigo);
-  $("#tsValue2").html(codigo1);
+  $("#Tswheight").html(codigo1);
+  $("#tsValue2").html(codigo);
 
 }
 
@@ -103,8 +103,8 @@ function tWeightT(n){
     var codigo1 = '<p>'+total1+'</p>';
   }
 
-  $("#Ttwheight").html(codigo);
-  $("#ttValue3").html(codigo1);
+  $("#Ttwheight").html(codigo1);
+  $("#ttValue3").html(codigo);
 }
 
 function showWeight(){
