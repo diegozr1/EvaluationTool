@@ -111,25 +111,43 @@ function tWeightT(n){
 }
 
 function finalWeightp(){
+  var total=0;
+  var totalInit = 0;
   if(isNaN((tWeightP(4)/100*parseFloat($('#pWeighti').val())).toFixed(2))){
     var codigo = 0;
   }else {
+    total+=(tWeightP(4)/100*parseFloat($('#pWeighti').val())).toFixed(2)
+    totalInit+=parseFloat($('#pWeighti').val();
     var codigo = '<p>'+(tWeightP(4)/100*parseFloat($('#pWeighti').val())).toFixed(2)+'</p>';
+    var codigoInit = '<p>'+parseFloat($('#pWeighti').val())+'</p>'
   }
   $("#fValue1").html(codigo);
-
+  $("#af").html(codigo);
+  $("#ai").html(codigo2);
   if(isNaN((tWeightS(10)/100*parseFloat($('#sWeighti').val()).toFixed(2)))){
     var codigo = 0;
   }else {
+    total+=(tWeightS(4)/100*parseFloat($('#sWeighti').val())).toFixed(2)
+    totalInit+=parseFloat($('#sWeighti').val();
     var codigo = '<p>'+(tWeightS(10)/100*parseFloat($('#sWeighti').val()).toFixed(2))+'</p>';
+    var codigoInit = '<p>'+parseFloat($('#sWeighti').val())+'</p>'
   }
     $("#fValue2").html(codigo);
+    $("#bf").html(codigo);
+    $("#bi").html(codigo2);
   if(isNaN((tWeightT(8)/100*parseFloat($('#tWeighti').val())).toFixed(2))){
     var codigo = 0;
   }else {
+    total+=(tWeightT(4)/100*parseFloat($('#tWeighti').val())).toFixed(2)
+    totalInit+=parseFloat($('#tWeighti').val();
     var codigo = '<p>'+(tWeightT(8)/100*parseFloat($('#tWeighti').val())).toFixed(2)+'</p>';
+    var codigoInit = '<p>'+parseFloat($('#tWeighti').val())+'</p>'
   }
   $("#fValue3").html(codigo);
+  $("#cf").html(codigo);
+  $("#bi").html(codigo2);
+  $("#gi").html('<p>'+totalInit+'<p>');
+  $("#gf").html('<p>'+total+'<p>');
 }
 
 function showWeight(){
