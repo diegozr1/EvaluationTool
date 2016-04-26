@@ -38,8 +38,8 @@ function tWeightS(n){
   var codigo = '<p>'+total+'</p>';
   var codigo1 = '<p>'+total1+'</p>';
 
-  $("#tsWheight1").html(codigo1);
-  $("#tsValue1").html(codigo);
+  $("#tsWheight2").html(codigo1);
+  $("#tsValue2").html(codigo);
 }
 
 function weightT(n){
@@ -62,8 +62,8 @@ function tWeightT(n){
   var codigo = '<p>'+total+'</p>';
   var codigo1 = '<p>'+total1+'</p>';
 
-  $("#ttWheight1").html(codigo1);
-  $("#ttValue1").html(codigo);
+  $("#ttWheight3").html(codigo1);
+  $("#ttValue3").html(codigo);
 }
 
 function showWeight(){
