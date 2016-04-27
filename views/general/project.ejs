@@ -24,20 +24,18 @@
           <div class="row">
               <div class="col-sm-12">
                   <div class="well">
-                      <!-- <h3><span class="fa fa-cubes"></span> my projects </h3>
-                          <p>
-                              <strong>Name</strong>: <%= user.local.projects %><br>
-                          </p>-->
                           <form>
-                          <div> <h1> Primary Considerations</h1></div>
+                          <div> <h2> Primary Considerations</h2></div>
+                              <br>
                           <div class="row">
                             <div class="col-md-1" ></div>
                             <div class="col-md-4" ></div>
                             <div class="col-md-2" ></div>
-                            <div class="col-md-2" >Part A Weighting:</div>
+                            <div class="col-md-2" ><b>Part A Weighting</b></div>
                             <input type="number" placeholder="Weight of section" class="col-md-2" id="pWeighti">
                             <div class="col-md-1"></div>
                           </div>
+                              <br>
                           <div class="row">
                             <div class="col-md-1"></div>
                             <div class="col-md-4">Consideration</div>
@@ -46,6 +44,7 @@
                             <div class="col-md-2" >Value</div>
                             <div class="col-md-1"></div>
                           </div>
+                              <br>
                           <div class="row">
                             <div class="col-md-1"></div>
                             <div class="col-md-4">Time constraints for project delivery</div>
@@ -54,7 +53,7 @@
                               <option value="3">Medium</option>
                               <option value="5">High</option>
                             </select>
-                            <input type="number" placeholder="First name" class="col-md-2" id="pWheight1">
+                            <input type="number" placeholder="Weight of the consideration" class="col-md-2" id="pWheight1">
                             <div class="col-md-2" id="pValue1"></div>
                             <div class="col-md-1"></div>
                           </div>
@@ -112,17 +111,18 @@
                             <div class="col-md-1"></div>
                           </div>
 
-                          <div> <h1> Secondary Considerations</h1></div>
+                          <div> <h2> Secondary Considerations</h2></div>
 
-
+                              <br>
                           <div class="row">
                             <div class="col-md-1" ></div>
                             <div class="col-md-4" ></div>
                             <div class="col-md-2" ></div>
-                            <div class="col-md-2" >Part A Weighting:</div>
+                            <div class="col-md-2" ><b>Part B Weighting:</b></div>
                             <input type="number" placeholder="Weight of section" class="col-md-2" id="sWeighti">
                             <div class="col-md-1"></div>
                           </div>
+                              <br>
                           <div class="row">
                             <div class="col-md-1"></div>
                             <div class="col-md-4">Consideration</div>
@@ -131,6 +131,7 @@
                             <div class="col-md-2" >Value</div>
                             <div class="col-md-1"></div>
                           </div>
+                              <br>
                           <div class="row">
                             <div class="col-md-1"></div>
                             <div class="col-md-4">Overall project complexity</div>
@@ -287,17 +288,17 @@
                             <div class="col-md-1"></div>
                           </div>
 
-                          <div> <h1>Other Considerations</h1></div>
-
+                          <div> <h2>Other Considerations</h2></div>
+                              <br>
                           <div class="row">
                             <div class="col-md-1" ></div>
                             <div class="col-md-4" ></div>
                             <div class="col-md-2" ></div>
-                            <div class="col-md-2" >Part C Weighting:</div>
+                            <div class="col-md-2" ><b>Part C Weighting:</b></div>
                             <input type="number" placeholder="Weight of section" class="col-md-2" id="tWeighti">
                             <div class="col-md-1"></div>
                           </div>
-
+                              <br>
                           <div class="row">
                             <div class="col-md-1" ></div>
                             <div class="col-md-4" >Consideration</div>
@@ -434,11 +435,11 @@
                             <div class="col-md-1"></div>
                           </div>
 
-                          <div> <h1>Sub Totals</h1></div>
+                          <div> <h2><b>Sub Totals</b></h2></div>
                           
                           <div class="row">
                             <div class="col-md-1"></div>
-                            <div class="col-md-4">A.  Primary Considerations</div>
+                            <div class="col-md-4"><b>A.</b>  Primary Considerations</div>
                             <div class="col-md-2"></div>
                             <div class="col-md-2" id="aI"></div>
                             <div class="col-md-2" id="aF"></div>
@@ -446,7 +447,7 @@
                           </div>
                           <div class="row">
                             <div class="col-md-1"></div>
-                            <div class="col-md-4">B.  Secondary Considerations</div>
+                            <div class="col-md-4"><b>B.</b>  Secondary Considerations</div>
                             <div class="col-md-2"></div>
                             <div class="col-md-2" id="bI"></div>
                             <div class="col-md-2" id="bF"></div>
@@ -454,7 +455,7 @@
                           </div>
                           <div class="row">
                             <div class="col-md-1"></div>
-                            <div class="col-md-4">C.  Other Considerations</div>
+                            <div class="col-md-4"><b>C.</b>  Other Considerations</div>
                             <div class="col-md-2"></div>
                             <div class="col-md-2" id="cI"></div>
                             <div class="col-md-2" id="cF"></div>
@@ -468,9 +469,10 @@
                             <div class="col-md-2" id="gF"></div>
                             <div class="col-md-1"></div>
                           </div>
+                              <br>
                           <div class="row">
                             <div class="col-md-1"></div>
-                            <div class="col-md-4">Decision</div>
+                            <div class="col-md-4"><h4>Is approved?</h4></div>
                             <div class="col-md-2"></div>
                             <div class="col-md-2"></div>
                             <div class="col-md-2" id="de"></div>
