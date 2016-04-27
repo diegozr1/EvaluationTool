@@ -109,7 +109,7 @@ function netcashflow(inflow, outflow) {
 
 function printpdf(){
   var x = parseInt($("#droplistbox").val());
-  var url ="http://generatepdf-ddnsnet.rhcloud.com/?periods="+x;
+  var url ="http://generatepdf-ddnsnet.rhcloud.com/?periods="+(x+1);
   contenedoroutflow = "&outflow[]=a";
   contenedorinflow = "&inflow[]=b";
   contenedorcomu = "&comu[]=c";
