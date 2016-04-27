@@ -17,51 +17,48 @@
 
 
       <div class="row top_tiles">
-                  <div class="animated flipInY col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <div class="tile-stats">
-                      <div class="icon"><i class="fa fa-dollar"></i>
-                      </div>
-                      <div class="count">USD - MXN</div>
-                      <br>
-                      <h3 id="usdmxn">1 X </h3>
-                    </div>
-                  </div>
-                  <div class="animated flipInY col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <div class="tile-stats">
-                      <div class="icon"><i class="fa fa-gbp"></i>
-                      </div>
-                      <div class="count">USD - BRL</div>
+          <div class="animated flipInY col-lg-3 col-md-6 col-sm-6 col-xs-12">
+            <div class="tile-stats">
+              <div class="icon"><i class="fa fa-dollar"></i>
+              </div>
+              <div class="count">USD - MXN</div>
+              <br>
+              <h3 id="usdmxn">1 X </h3>
+            </div>
+          </div>
+          <div class="animated flipInY col-lg-3 col-md-6 col-sm-6 col-xs-12">
+            <div class="tile-stats">
+              <div class="icon"><i class="fa fa-gbp"></i>
+              </div>
+              <div class="count">USD - BRL</div>
 
-                      <br>
-                      <h3 id="usdbrl">1 X </h3>
-                    </div>
-                  </div>
-                  <div class="animated flipInY col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <div class="tile-stats">
-                      <div class="icon"><i class="fa fa-eur"></i>
-                      </div>
-                      <div class="count">USD - EURO</div>
-                      <br>
-                      <h3 id="usdeur">1 X </h3>
-                    </div>
-                  </div>
-                  <div class="animated flipInY col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <div class="tile-stats">
-                      <div class="icon"><i class="fa fa-jpy"></i>
-                      </div>
-                      <div class="count">USD - JPY</div>
-                      <br>
-                      <h3 id="usdjpy">1 X </h3>
-                    </div>
-                  </div>
-                </div>
-
-
+              <br>
+              <h3 id="usdbrl">1 X </h3>
+            </div>
+          </div>
+          <div class="animated flipInY col-lg-3 col-md-6 col-sm-6 col-xs-12">
+            <div class="tile-stats">
+              <div class="icon"><i class="fa fa-eur"></i>
+              </div>
+              <div class="count">USD - EURO</div>
+              <br>
+              <h3 id="usdeur">1 X </h3>
+            </div>
+          </div>
+          <div class="animated flipInY col-lg-3 col-md-6 col-sm-6 col-xs-12">
+            <div class="tile-stats">
+              <div class="icon"><i class="fa fa-jpy"></i>
+              </div>
+              <div class="count">USD - JPY</div>
+              <br>
+              <h3 id="usdjpy">1 X </h3>
+            </div>
+          </div>
+        </div>
 
         <div class="page-header text-center">
             <h1><span class="fa fa-home"></span> Welcome! </h1>
         </div>
-
 
           <div class="row">
               <div class="col-sm-12">
@@ -87,27 +84,27 @@
                       </div>
                   </div>
               </div>
+          </div>
+
         </div>
     </div>
-  </div>
 </div>
 
   <% include partials/js.ejs %>
-
-  <script>
-  $(document).ready(function(){
-  		$.getJSON("https://api.coinbase.com/v2/exchange-rates",function(result){
-        $("#usdmxn").append(result.data.rates['MXN'] + " ");
-        $("#usdbrl").append(result.data.rates['BRL'] + " ");
-        $("#usdeur").append(result.data.rates['EUR'] + " ");
-        $("#usdjpy").append(result.data.rates['JPY'] + " ");
-        /*
-        $.each(result.data.rates['MXN'], function(i, field){
-          //$("#usdmxn").append(JSON.stringify(field) + " ");
-        });
-        */
-      });
-  });
-  </script>
-</body>
+          <script>
+          $(document).ready(function(){
+                $.getJSON("https://api.coinbase.com/v2/exchange-rates",function(result){
+                $("#usdmxn").append(result.data.rates['MXN'] + " ");
+                $("#usdbrl").append(result.data.rates['BRL'] + " ");
+                $("#usdeur").append(result.data.rates['EUR'] + " ");
+                $("#usdjpy").append(result.data.rates['JPY'] + " ");
+                /*
+                $.each(result.data.rates['MXN'], function(i, field){
+                  //$("#usdmxn").append(JSON.stringify(field) + " ");
+                });
+                */
+              });
+          });
+        </script>
+    </body>
 </html>
