@@ -5329,3 +5329,11 @@ ul.notifications {
   width: 100%;
   height: 2px;
 }
+
+
+/* My custom styles */
+
+.done-true {
+  text-decoration: line-through;
+  color: grey;
+}

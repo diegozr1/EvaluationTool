@@ -3,90 +3,103 @@
 <head>
   <% include partials/head %>
 </head>
-<body class="nav-md">
-<div class="container body">
-  <div class="main_container">
+<body class="nav-md"ng-app="todoApp">
+    <div class="container body">
+      <div class="main_container">
+
+      <% include partials/sidebar %>
+
+      <% include partials/topmenu %>
+
+        <div class="right_col" role="main">
 
 
-  <% include partials/sidebar %>
-
-  <% include partials/topmenu %>
-
-
-    <div class="right_col" role="main">
-
-
-      <div class="row top_tiles">
-        <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <div class="tile-stats">
-            <div class="icon"><i class="fa fa-dollar"></i>
+          <div class="row top_tiles">
+            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <div class="tile-stats">
+                <div class="icon"><i class="fa fa-dollar"></i>
+                </div>
+                <div class="count">USD - MXN</div>
+                <br>
+                <h3 id="usdmxn"></h3>
+              </div>
             </div>
-            <div class="count">USD - MXN</div>
-            <br>
-            <h3 id="usdmxn"></h3>
-          </div>
-        </div>
-        <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <div class="tile-stats">
-            <div class="icon"><i class="fa fa-gbp"></i>
-            </div>
-            <div class="count">USD - BRL</div>
+            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <div class="tile-stats">
+                <div class="icon"><i class="fa fa-gbp"></i>
+                </div>
+                <div class="count">USD - BRL</div>
 
-            <br>
-            <h3 id="usdbrl"></h3>
-          </div>
-        </div>
-        <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <div class="tile-stats">
-            <div class="icon"><i class="fa fa-eur"></i>
+                <br>
+                <h3 id="usdbrl"></h3>
+              </div>
             </div>
-            <div class="count">USD - EURO</div>
-            <br>
-            <h3 id="usdeur"></h3>
-          </div>
-        </div>
-        <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
-          <div class="tile-stats">
-            <div class="icon"><i class="fa fa-jpy"></i>
+            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <div class="tile-stats">
+                <div class="icon"><i class="fa fa-eur"></i>
+                </div>
+                <div class="count">USD - EURO</div>
+                <br>
+                <h3 id="usdeur"></h3>
+              </div>
             </div>
-            <div class="count">USD - JPY</div>
-            <br>
-            <h3 id="usdjpy"></h3>
+            <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+              <div class="tile-stats">
+                <div class="icon"><i class="fa fa-jpy"></i>
+                </div>
+                <div class="count">USD - JPY</div>
+                <br>
+                <h3 id="usdjpy"></h3>
+              </div>
+            </div>
           </div>
+
+            <div class="page-header text-center">
+                <h1><span class="fa fa-user"></span> Profile </h1>
+            </div>
+              <div class="row">
+                  <div class="col-sm-6">
+                      <div class="well">
+                          <h3><span class="fa fa-rocket"></span> Personal info</h3>
+                              <p>
+                                  <strong>Name</strong>: <%= user.local.name %><br>
+                              </p>
+                              <p>
+                                  <strong>Email</strong>: <%= user.local.email %><br>
+                              </p>
+                              <p>
+                                <br>
+                                <a href="/unlink/local" class="btn btn-danger btn-block"><span class="fa fa-lock"></span> Delete account</a>
+                              </p>
+                      </div>
+                  </div>
+                  <div class="col-sm-6">
+                      <div class="well">
+                          <h3><span class="fa fa-cubes"></span> Your projects</h3>
+                          <div ng-controller="TodoListController as todoList">
+                              <span>{{todoList.remaining()}} of {{todoList.todos.length}} remaining</span>
+                              <a href="" ng-click="todoList.archive()">projects</a>
+                              <ul class="unstyled">
+                                  <li ng-repeat="todo in todoList.todos">
+                                      <label class="checkbox">
+                                          <input type="checkbox" ng-model="todo.done">
+                                          <span class="done-{{todo.done}}">{{todo.text}}</span>
+                                      </label>
+                                  </li>
+                              </ul>
+                              <form ng-submit="todoList.addTodo()" class="form-group">
+                                  <input type="text" ng-model="todoList.todoText"  size="30"
+                                         placeholder="add a new project here" class="form-control">
+                                  <br>
+                                  <input class="btn btn-primary btn-lg btn-block " type="submit" value="add project">
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+            </div>
         </div>
       </div>
-
-        <div class="page-header text-center">
-            <h1><span class="fa fa-user"></span> Profile </h1>
-        </div>
-          <div class="row">
-              <div class="col-sm-6">
-                  <div class="well">
-                      <h3><span class="fa fa-rocket"></span> Personal info</h3>
-                          <p>
-                              <strong>Name</strong>: <%= user.local.name %><br>
-                          </p>
-                          <p>
-                              <strong>Email</strong>: <%= user.local.email %><br>
-                          </p>
-                          <p>
-                            <br>
-                            <a href="/unlink/local" class="btn btn-danger btn-block"><span class="fa fa-lock"></span> Delete account</a>
-                          </p>
-                  </div>
-              </div>
-              <div class="col-sm-6">
-                  <div class="well">
-                      <h3><span class="fa fa-cubes"></span> Your projects</h3>
-                          <p>
-                              <strong>Name</strong>: <%= user.local.projects %><br>
-                          </p>
-                  </div>
-              </div>
-        </div>
     </div>
-  </div>
-</div>
 
   <% include partials/js.ejs %>
   <script src="js/exchange-rates.js"></script>
