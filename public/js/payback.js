@@ -108,5 +108,6 @@ function netcashflow(inflow, outflow) {
 }
 
 function printpdf(){
-  window.open('http://www.google.com');
+  var url = "http://www.google.com"
+  window.open(url);
 }
