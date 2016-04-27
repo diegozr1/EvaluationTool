@@ -108,8 +108,12 @@ function netcashflow(inflow, outflow) {
 }
 
 function printpdf(){
-  var url ="http://generatepdf-ddnsnet.rhcloud.com/?"
-  url += "juas=pene&periods=10&outflow[]=a&inflow[]=b&comu[]=c"
+  var x = parseInt($("#droplistbox").val());
+  var url ="http://generatepdf-ddnsnet.rhcloud.com/?periods="+x;
+  contenedoroutflow = "&outflow[]=a";
+  contenedorinflow = "&inflow[]=b";
+  contenedorcomu = "&comu[]=c";
+  url +=contenedoroutflow+contenedorinflow+contenedorcomu;
 
   window.open(url);
 }
