@@ -28,8 +28,8 @@ function tWeightP(n){
   }
   var codigo = '<p>'+total.toFixed(2)+'</p>';
 
-  $("#tpWheight1").html(codigo1);
-  $("#tpValue1").html(codigo);
+  $("#tfWheight1").html(codigo1);
+  $("#tfValue1").html(codigo);
   return total.toFixed(2)
 }
 
@@ -67,8 +67,8 @@ function tWeightS(n){
     var codigo1 = '<p>'+total1.toFixed(2)+'</p>';
   }
 
-  $("#Tswheight").html(codigo1);
-  $("#tsValue2").html(codigo);
+  $("#tfWheight2").html(codigo1);
+  $("#tfValue2").html(codigo);
 return total.toFixed(2)
 }
 
@@ -105,8 +105,8 @@ function tWeightT(n){
     var codigo1 = '<p>'+total1.toFixed(2)+'</p>';
   }
 
-  $("#Ttwheight").html(codigo);
-  $("#ttValue3").html(codigo1);
+  $("#tfWheight3").html(codigo);
+  $("#tfValue3").html(codigo1);
   return total.toFixed(2)
 }
 
