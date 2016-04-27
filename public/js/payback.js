@@ -110,10 +110,14 @@ function netcashflow(inflow, outflow) {
 function printpdf(){
   var x = parseInt($("#droplistbox").val());
   var url ="http://generatepdf-ddnsnet.rhcloud.com/?periods="+(x+1);
-  contenedoroutflow = "&outflow[]=a";
-  contenedorinflow = "&inflow[]=b";
-  contenedorcomu = "&comu[]=c";
-  url +=contenedoroutflow+contenedorinflow+contenedorcomu;
+  var contenedoroutflow = "&outflow[]=";
+  var contenedorinflow = "&inflow[]=";
+  var contenedorcomu = "&comu[]=";
+  var contendorfinal;
+  for(i=0;i<x+1;i++){
+    contendorfinal += contenedoroutflow+ parseFloat($("#outflow0").val())+contenedorinflow+parseFloat($("#inflow0").val()) +contenedorcomu+parseFloat($("#comulativecash0").val());
+  }
+  url +=contendorfinal;
 
   window.open(url);
 }
