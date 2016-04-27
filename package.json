@@ -10,12 +10,12 @@
     "ejs": "~0.8.5",
     "express": "~4.0.0",
     "express-session": "~1.0.0",
+    "html-pdf": "^2.0.1",
     "method-override": "~1.0.0",
     "mongoose": "~4.4.2",
     "morgan": "~1.0.0",
     "passport": "~0.1.17",
     "passport-local": "~0.1.6",
-    "path": "latest",
-    "pdfkit": "^0.7.2"
+    "path": "latest"
   }
 }

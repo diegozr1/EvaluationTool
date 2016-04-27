@@ -1,4 +1,5 @@
-var PDFDocument = require = 'pdfkit';
+var fs = require('fs');
+var pdf = require('html-pdf');
 
 module.exports = function(app, passport) {
 
@@ -77,7 +78,13 @@ module.exports = function(app, passport) {
 
 
     app.get('/pdf', function (req,res) {
-        res.send("hola");
+        var html = fs.readFileSync('test/businesscard.html', 'utf8');
+        var options = { format: 'Letter' };
+
+        pdf.create(html, options).toFile('./businesscard.pdf', function(err, res) {
+            if (err) return console.log(err);
+            console.log(res); // { filename: '/app/businesscard.pdf' }
+        });
     });
 
 // =============================================================================
