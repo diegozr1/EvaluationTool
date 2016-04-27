@@ -106,3 +106,7 @@ function imprimirresultados() {
 function netcashflow(inflow, outflow) {
   return inflow - outflow;
 }
+
+function printpdf(){
+  window.open('http://www.google.com');
+}
