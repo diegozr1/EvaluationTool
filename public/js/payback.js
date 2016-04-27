@@ -22,7 +22,7 @@ function mostrar() {
 function agregar(limite,bandera,principal){
   var codigo='<div class="row"><div class="col-md-1" style="text-align:center;"><b>PERIOD</b></div><div class="col-md-4" style="text-align:center;"><b>OUTFLOWS</b></div><div class="col-md-4" style="text-align:center;"><b>INFLOWS</b></div><div class="col-md-3" style="text-align:center;"><b>CUMULATIVE CASH FLOW</b></div></div><br>';
   if(bandera){
-    codigo +='<div class="row" id ="linea0" ><div class="col-md-1" style="text-align:center;">0</div><input type="number" class="col-md-4" id="outflow0" value="'0-principal'"><input type="number" class="col-md-4" id="inflow0"><input type="number" class="col-md-3" id="comulativecash0" disabled></div><br>';
+    codigo +='<div class="row" id ="linea0" ><div class="col-md-1" style="text-align:center;">0</div><input type="number" class="col-md-4" id="outflow0" value="'+(0-principal)+'"><input type="number" class="col-md-4" id="inflow0"><input type="number" class="col-md-3" id="comulativecash0" disabled></div><br>';
   }
   for(i=1;i<limite+1;i++){
     codigo += '<div class="row"  id ="linea'+i+'" ><div class="col-md-1" style="text-align:center;">'+i+'</div><input type="number" class="col-md-4" id="outflow'+i+'"><input type="number" class="col-md-4" id="inflow'+i+'"><input type="number" class="col-md-3" id="comulativecash'+i+'" disabled></div><br>';
