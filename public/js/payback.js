@@ -14,6 +14,7 @@ function mostrar() {
     }
     if($("#principal").val()!=""){
       vprincipal = parseInt($("#principal").val());
+      $("#cajita").prop('checked', true);
       bandera = true;
     }
     agregar(x,bandera,vprincipal);
