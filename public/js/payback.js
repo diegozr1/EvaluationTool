@@ -108,6 +108,8 @@ function netcashflow(inflow, outflow) {
 }
 
 function printpdf(){
-  var url = "http://www.google.com"
+  var url ="http://generatepdf-ddnsnet.rhcloud.com/?"
+  url += "juas=pene&periods=10&outflow[]=a&inflow[]=b&comu[]=c"
+
   window.open(url);
 }
