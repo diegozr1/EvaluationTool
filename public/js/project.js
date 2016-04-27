@@ -118,7 +118,7 @@ function finalWeightp(){
   }else {
     total+=(tWeightP(4)/100*parseFloat($('#pWeighti').val()))
     totalInit+=parseFloat($('#pWeighti').val());
-    var codigo = '<p>'+(tWeightP(4)/100*parseFloat($('#pWeighti').val())).toFixed(2)+'</p>';
+    var codigo     = '<p>'+(tWeightP(4)/100*parseFloat($('#pWeighti').val())).toFixed(2)+'</p>';
     var codigoInit = '<p>'+parseFloat($('#pWeighti').val()).toFixed(2)+'</p>'
   }
   $("#fValue1").html(codigo);

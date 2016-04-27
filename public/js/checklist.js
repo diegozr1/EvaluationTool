@@ -128,14 +128,15 @@ function checkListFunction(){
     }
     sumValues += Number(x);
 
+
     if(sumValues <55){
-        document.getElementById("txtResultCheckList").value = "Not accepted";
+        $("#txtResultCheckList").html('<div class="alert alert-danger" role="alert">Not accepted</div>');
     }
-    else if(sumValues>=55 && sumValues<70){
-        document.getElementById("txtResultCheckList").value = "Can consider";
+        else if(sumValues>=55 && sumValues<70){
+        $("#txtResultCheckList").html('<div class="alert alert-warning" role="alert">Can consider</div>');
     }
-    else
+        else
     {
-        document.getElementById("txtResultCheckList").value = "Accepted";
+        $("#txtResultCheckList").html('<div class="alert alert-success" role="alert">Project Accepted</div>');
     }
 }
