@@ -115,7 +115,7 @@ function printpdf(){
   var contenedorcomu = "&comu[]=";
   var contendorfinal;
   for(i=0;i<x+1;i++){
-    contendorfinal += contenedoroutflow+ parseFloat($("#outflow"+i).val())+contenedorinflow+parseFloat($("#inflow"+i).val()) +contenedorcomu+parseFloat($("#comulativecash"+i).val());
+    contendorfinal += contenedoroutflow+ (parseFloat($("#outflow"+i).val())*-1)+contenedorinflow+parseFloat($("#inflow"+i).val()) +contenedorcomu+parseFloat($("#comulativecash"+i).val());
   }
   url +=contendorfinal;
 
