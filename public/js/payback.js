@@ -23,10 +23,10 @@ function mostrar() {
 function agregar(limite,bandera,principal){
   var codigo='<div class="row"><div class="col-md-1" style="text-align:center;"><b>PERIOD</b></div><div class="col-md-4" style="text-align:center;"><b>OUTFLOWS</b></div><div class="col-md-4" style="text-align:center;"><b>INFLOWS</b></div><div class="col-md-3" style="text-align:center;"><b>CUMULATIVE CASH FLOW</b></div></div><br>';
   if(bandera){
-    codigo +='<div class="row" id ="linea0" ><div class="col-md-1" style="text-align:center;">0</div><input type="number" class="col-md-4" id="outflow0" value="'+principal+'"><input type="number" class="col-md-4" id="inflow0"><input type="number" class="col-md-3" id="comulativecash0" disabled></div><br>';
+    codigo +='<div class="row" id ="linea0" ><div class="col-md-1" style="text-align:center;">0</div><input type="number" class="col-md-4" id="outflow0" value="'+principal+'"><input type="number" class="col-md-4" id="inflow0" value="0"><input type="number" class="col-md-3" id="comulativecash0" disabled></div><br>';
   }
   for(i=1;i<limite+1;i++){
-    codigo += '<div class="row"  id ="linea'+i+'" ><div class="col-md-1" style="text-align:center;">'+i+'</div><input type="number" class="col-md-4" id="outflow'+i+'"><input type="number" class="col-md-4" id="inflow'+i+'"><input type="number" class="col-md-3" id="comulativecash'+i+'" disabled></div><br>';
+    codigo += '<div class="row"  id ="linea'+i+'" ><div class="col-md-1" style="text-align:center;">'+i+'</div><input type="number" class="col-md-4" id="outflow'+i+'" value="0"><input type="number" class="col-md-4" id="inflow'+i+'" value="0"><input type="number" class="col-md-3" id="comulativecash'+i+'" disabled></div><br>';
   }
   codigo+='<div class="row"  id ="linea'+i+'" ><div class="col-md-4" style="text-align:center;"><button type="button" class="btn btn-default" onclick="imprimirresultados()">Show payback period</button></div><div class="col-md-1" ></div><input type="number" class="col-md-5" id="netpresentvalue" disabled><div class="col-md-1" ></div></div><br>'
   $("#contenedor").html(codigo);
