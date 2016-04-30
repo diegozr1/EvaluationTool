@@ -117,7 +117,7 @@ function printpdf(){
   for(i=0;i<x+1;i++){
     contendorfinal += contenedoroutflow+ (parseFloat($("#outflow"+i).val())*-1)+contenedorinflow+parseFloat($("#inflow"+i).val()) +contenedorcomu+parseFloat($("#comulativecash"+i).val());
   }
-  url +=contendorfinal+parseFloat($("#netpresentvalue"+i).val());
+  url +=contendorfinal+"&pbp="+parseFloat($("#netpresentvalue"+i).val());
 
   window.open(url);
 }
