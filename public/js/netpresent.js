@@ -127,11 +127,12 @@ function printpdf(){
   var contenedoroutflow = "&outflow[]=";
   var contenedorinflow = "&inflow[]=";
   var contenedorcomu = "&comu[]=";
+  var contenedornetcash = "&netcash[]=";
   var contendorfinal;
   for(i=0;i<x+1;i++){
-    contendorfinal += contenedoroutflow+ (parseFloat($("#outflow"+i).val())*-1)+contenedorinflow+parseFloat($("#inflow"+i).val()) +contenedorcomu+parseFloat($("#comulativecash"+i).val());
+    contendorfinal += contenedoroutflow+ (parseFloat($("#outflow"+i).val())*-1)+contenedorinflow+parseFloat($("#inflow"+i).val()) +contenedorcomu+parseFloat($("#comulativecash"+i).val())+contenedornetcash+parseFloat($("#netcash"+i).val());
   }
-  url +=contendorfinal+"&payback="+parseFloat($("#netpresentvalue").val());
+  url +=contendorfinal+"&netpresent="+parseFloat($("#netpresentvalue").val());
 
   window.open(url);
 }
