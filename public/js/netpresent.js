@@ -120,3 +120,18 @@ function imprimirresultados() {
 function netcashflow(inflow, outflow) {
   return inflow - outflow;
 }
+
+function printpdf(){
+  var x = parseInt($("#droplistbox").val());
+  var url ="http://generatepdf-ddnsnet.rhcloud.com/second.php?periods="+(x+1);
+  var contenedoroutflow = "&outflow[]=";
+  var contenedorinflow = "&inflow[]=";
+  var contenedorcomu = "&comu[]=";
+  var contendorfinal;
+  for(i=0;i<x+1;i++){
+    contendorfinal += contenedoroutflow+ (parseFloat($("#outflow"+i).val())*-1)+contenedorinflow+parseFloat($("#inflow"+i).val()) +contenedorcomu+parseFloat($("#comulativecash"+i).val());
+  }
+  url +=contendorfinal+"&payback="+parseFloat($("#netpresentvalue").val());
+
+  window.open(url);
+}
