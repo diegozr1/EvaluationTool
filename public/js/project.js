@@ -223,7 +223,7 @@ function printpdf(){
   }
   for(i=1;i<4;i++){
     contenedorfinal += valorfinal + parseFloat($("#fValue"+i).val())
-    Console.log( parseFloat($("#fValue"+i).val()));
+    console.log( parseFloat($("#fValue"+i).val()));
   }
   url +=contenedorfinal+"&approved="+$("#de").text();
 
