@@ -181,7 +181,7 @@ function printpdf(){
   var weightingc = "&weightingc[]=";
   var valuea = "&valuea[]=";
   var valueb = "&valueb[]=";
-  var valueac = "&valuec[]=";
+  var valuec = "&valuec[]=";
   var contenedorfinal;
   contenedorfinal+=pesopartea+pesoparteb+pesopartec;
   for(i=1;i<5;i++){
