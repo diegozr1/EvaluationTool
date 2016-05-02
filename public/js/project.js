@@ -183,6 +183,8 @@ function printpdf(){
   var valueb = "&valueb[]=";
   var valuec = "&valuec[]=";
   var valorfinal ="&valorfinal[]="
+  var totalfinal = "&totalfinal[]="
+  var pesofinal = "&pesofinal[]="
   var contenedorfinal;
   contenedorfinal+=pesopartea+pesoparteb+pesopartec;
   for(i=1;i<5;i++){
@@ -223,7 +225,8 @@ function printpdf(){
   }
   for(i=1;i<4;i++){
     contenedorfinal += valorfinal + parseFloat($("#fValue"+i).text())
-    console.log( parseFloat($("#fValue"+i).text()));
+    contenedorfinal += totalfinal + parseFloat($("#tfValue"+i).text())
+    contenedorfinal += pesofinal + parseFloat($("#tfWheight"+i).text())
   }
   url +=contenedorfinal+"&approved="+$("#de").text();
 
