@@ -182,17 +182,18 @@ function printpdf(){
   var valuea = "&valuea[]=";
   var valueb = "&valueb[]=";
   var valueac = "&valuec[]=";
-  var contendorfinal = contenedorfinal+pesopartea+pesoparteb+pesopartec;
+  var contenedorfinal;
+  contenedorfinal+=pesopartea+pesoparteb+pesopartec;
   for(i=1;i<5;i++){
-    contendorfinal += ratinga+$("#pRating"+i).text()+weightinga+parseFloat($("#pWheight"+i).val())+valuea+parseFloat($("#pValue"+i).text());
+    contenedorfinal += ratinga+$("#pRating"+i).text()+weightinga+parseFloat($("#pWheight"+i).val())+valuea+parseFloat($("#pValue"+i).text());
   }
   for(i=1;i<x+11;i++){
-    contendorfinal += ratingb+$("#pRating"+i).text()+weightingb+parseFloat($("#pWheight"+i).val())+valueb+parseFloat($("#pValue"+i).text());
+    contenedorfinal += ratingb+$("#pRating"+i).text()+weightingb+parseFloat($("#pWheight"+i).val())+valueb+parseFloat($("#pValue"+i).text());
   }
   for(i=1;i<x+9;i++){
-    contendorfinal += ratingc+$("#pRating"+i).text()+weightingc+parseFloat($("#pWheight"+i).val())+valuec+parseFloat($("#pValue"+i).text());
+    contenedorfinal += ratingc+$("#pRating"+i).text()+weightingc+parseFloat($("#pWheight"+i).val())+valuec+parseFloat($("#pValue"+i).text());
   }
-  url +=contendorfinal+"&approved="+$("#de").text();
+  url +=contenedorfinal+"&approved="+$("#de").text();
 
   window.open(url);
 }
