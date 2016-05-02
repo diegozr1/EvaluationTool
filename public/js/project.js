@@ -186,21 +186,39 @@ function printpdf(){
   contenedorfinal+=pesopartea+pesoparteb+pesopartec;
   for(i=1;i<5;i++){
     if($("#pRating"+i).val()==1){
-      ratinga+="low";
+      contenedorfinal+=ratinga+"low";
     }else if($("#pRating"+i).val()==3){
-      ratinga+="medium";
+      contenedorfinal+=ratinga+"medium";
     }else if($("#pRating"+i).val()==5){
-      ratinga+="high";
+      rcontenedorfinal+=ratinga+"high";
     }else{
-      ratinga+="null";
+      rcontenedorfinal+=ratinga+"null";
     }
-    contenedorfinal += ratinga+weightinga+parseFloat($("#pWheight"+i).val())+valuea+parseFloat($("#pValue"+i).text());
+    contenedorfinal +=weightinga+parseFloat($("#pWheight"+i).val())+valuea+parseFloat($("#pValue"+i).text());
   }
   for(i=1;i<11;i++){
-    contenedorfinal += ratingb+$("#sRating"+i).val()+weightingb+parseFloat($("#sWheight"+i).val())+valueb+parseFloat($("#sValue"+i).text());
+    if($("#sRating"+i).val()==1){
+      contenedorfinal+=ratingb+"low";
+    }else if($("#sRating"+i).val()==3){
+      contenedorfinal+=ratingb+"medium";
+    }else if($("#sRating"+i).val()==5){
+      rcontenedorfinal+=ratingb+"high";
+    }else{
+      rcontenedorfinal+=ratingb+"null";
+    }
+    contenedorfinal +=weightingb+parseFloat($("#sWheight"+i).val())+valueb+parseFloat($("#sValue"+i).text());
   }
   for(i=1;i<9;i++){
-    contenedorfinal += ratingc+$("#tRating"+i).val()+weightingc+parseFloat($("#tWheight"+i).val())+valuec+parseFloat($("#tValue"+i).text());
+    if($("#tRating"+i).val()==1){
+      contenedorfinal+=ratingc+"low";
+    }else if($("#tRating"+i).val()==3){
+      contenedorfinal+=ratingc+"medium";
+    }else if($("#tRating"+i).val()==5){
+      rcontenedorfinal+=ratingc+"high";
+    }else{
+      rcontenedorfinal+=ratingc+"null";
+    }
+    contenedorfinal +=weightingc+parseFloat($("#tWheight"+i).val())+valuec+parseFloat($("#tValue"+i).text());
   }
   url +=contenedorfinal+"&approved="+$("#de").text();
 
