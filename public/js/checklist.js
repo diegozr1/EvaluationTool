@@ -140,3 +140,16 @@ function checkListFunction(){
         $("#txtResultCheckList").html('<div class="alert alert-success" role="alert">Project Accepted</div>');
     }
 }
+
+function printpdf(){
+  var url ="http://generatepdf-ddnsnet.rhcloud.com/third.php?";
+  var contenedorrespuesta = "&respuestas[]=";
+  var contenedorpregunta = "&preguntas[]=";
+  var contendorfinal;
+  for(i=1;i<20;i++){
+    contendorfinal += contenedorrespuesta+ $("#txtRespuesta"+i).val()+contenedorpregunta+$("#txtPregunta"+i).val();
+  }
+  url +=contendorfinal;
+
+  window.open(url);
+}
