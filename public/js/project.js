@@ -228,7 +228,7 @@ function printpdf(){
     contenedorfinal += totalfinal + parseFloat($("#tfValue"+i).text())
     contenedorfinal += pesofinal + parseFloat($("#tfWheight"+i).text())
   }
-  url +=contenedorfinal+"&approved="+$("#de").text();
+  url +=contenedorfinal+"&approved="+$("#de").text()+"&gi="+parseFloat($("#gI").text())+"&gf="+parseFloat($("#gF").text());
 
   window.open(url);
 }
