@@ -182,15 +182,16 @@ function printpdf(){
   var valuea = "&valuea[]=";
   var valueb = "&valueb[]=";
   var valuec = "&valuec[]=";
+  var valorfinal ="&valorfinal[]="
   var contenedorfinal;
   contenedorfinal+=pesopartea+pesoparteb+pesopartec;
   for(i=1;i<5;i++){
     if($("#pRating"+i).val()==1){
-      contenedorfinal+=ratinga+"low";
+      contenedorfinal+=ratinga+"Low";
     }else if($("#pRating"+i).val()==3){
-      contenedorfinal+=ratinga+"medium";
+      contenedorfinal+=ratinga+"Medium";
     }else if($("#pRating"+i).val()==5){
-      rcontenedorfinal+=ratinga+"high";
+      rcontenedorfinal+=ratinga+"High";
     }else{
       rcontenedorfinal+=ratinga+"null";
     }
@@ -198,11 +199,11 @@ function printpdf(){
   }
   for(i=1;i<11;i++){
     if($("#sRating"+i).val()==1){
-      contenedorfinal+=ratingb+"low";
+      contenedorfinal+=ratingb+"Low";
     }else if($("#sRating"+i).val()==3){
-      contenedorfinal+=ratingb+"medium";
+      contenedorfinal+=ratingb+"Medium";
     }else if($("#sRating"+i).val()==5){
-      rcontenedorfinal+=ratingb+"high";
+      rcontenedorfinal+=ratingb+"High";
     }else{
       rcontenedorfinal+=ratingb+"null";
     }
@@ -210,15 +211,18 @@ function printpdf(){
   }
   for(i=1;i<9;i++){
     if($("#tRating"+i).val()==1){
-      contenedorfinal+=ratingc+"low";
+      contenedorfinal+=ratingc+"Low";
     }else if($("#tRating"+i).val()==3){
-      contenedorfinal+=ratingc+"medium";
+      contenedorfinal+=ratingc+"Medium";
     }else if($("#tRating"+i).val()==5){
-      rcontenedorfinal+=ratingc+"high";
+      rcontenedorfinal+=ratingc+"High";
     }else{
       rcontenedorfinal+=ratingc+"null";
     }
     contenedorfinal +=weightingc+parseFloat($("#tWheight"+i).val())+valuec+parseFloat($("#tValue"+i).text());
+  }
+  for(i=1;i<4;i++){
+    contenedorfinal += valorfinal + parseFloat($("#fValue"+i).val())
   }
   url +=contenedorfinal+"&approved="+$("#de").text();
 
