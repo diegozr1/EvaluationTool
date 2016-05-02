@@ -185,13 +185,13 @@ function printpdf(){
   var contenedorfinal;
   contenedorfinal+=pesopartea+pesoparteb+pesopartec;
   for(i=1;i<5;i++){
-    contenedorfinal += ratinga+"hola"+weightinga+parseFloat($("#pWheight"+i).val())+valuea+parseFloat($("#pValue"+i).text());
+    contenedorfinal += ratinga+$("#pRating option:selected"+i).text()+weightinga+parseFloat($("#pWheight"+i).val())+valuea+parseFloat($("#pValue"+i).text());
   }
   for(i=1;i<11;i++){
-    contenedorfinal += ratingb+"adios"+weightingb+parseFloat($("#pWheight"+i).val())+valueb+parseFloat($("#pValue"+i).text());
+    contenedorfinal += ratingb+$("#sRating option:selected"+i).text()+weightingb+parseFloat($("#sWheight"+i).val())+valueb+parseFloat($("#sValue"+i).text());
   }
   for(i=1;i<9;i++){
-    contenedorfinal += ratingc+"see you"+weightingc+parseFloat($("#pWheight"+i).val())+valuec+parseFloat($("#pValue"+i).text());
+    contenedorfinal += ratingc+$("#tRating option:selected"+i).text()+weightingc+parseFloat($("#tWheight"+i).val())+valuec+parseFloat($("#tValue"+i).text());
   }
   url +=contenedorfinal+"&approved="+$("#de").text();
 
