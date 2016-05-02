@@ -185,10 +185,10 @@ function printpdf(){
   var contenedorfinal;
   contenedorfinal+=pesopartea+pesoparteb+pesopartec;
   for(i=1;i<5;i++){
-    contenedorfinal += ratinga+$("#pRating"+i).text().replace(/ /g,'');+weightinga+parseFloat($("#pWheight"+i).val())+valuea+parseFloat($("#pValue"+i).text());
+    contenedorfinal += ratinga+$("#pRating"+i).text().replace(/\s/g," ");+weightinga+parseFloat($("#pWheight"+i).val())+valuea+parseFloat($("#pValue"+i).text());
   }
   for(i=1;i<11;i++){
-    contenedorfinal += ratingb+$.trim("#sRating"+i).text())+weightingb+parseFloat($("#sWheight"+i).val())+valueb+parseFloat($("#sValue"+i).text());
+    contenedorfinal += ratingb+$("#sRating"+i).text())+weightingb+parseFloat($("#sWheight"+i).val())+valueb+parseFloat($("#sValue"+i).text());
   }
   for(i=1;i<9;i++){
     contenedorfinal += ratingc+$("#tRating"+i).text()+weightingc+parseFloat($("#tWheight"+i).val())+valuec+parseFloat($("#tValue"+i).text());
