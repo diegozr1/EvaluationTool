@@ -170,9 +170,9 @@ function showWeight(){
 
 function printpdf(){
   var url ="http://generatepdf-ddnsnet.rhcloud.com/fourth.php?";
-  var pesopartea= "&pesopartea="+parseFloat($("#pWeighti"+i).val());
-  var pesoparteb = "&pesoparteb="+parseFloat($("#sWeighti"+i).val());;
-  var pesopartec = "&pesopartec="+parseFloat($("#tWeighti"+i).val());;
+  var pesopartea= "&pesopartea="+parseFloat($("#pWeighti").val());
+  var pesoparteb = "&pesoparteb="+parseFloat($("#sWeighti").val());;
+  var pesopartec = "&pesopartec="+parseFloat($("#tWeighti").val());;
   var ratinga = "&ratinga[]=";
   var ratingb = "&ratingb[]=";
   var ratingc = "&ratingc[]=";
