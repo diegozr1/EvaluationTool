@@ -187,10 +187,10 @@ function printpdf(){
   for(i=1;i<5;i++){
     contenedorfinal += ratinga+$("#pRating"+i).text()+weightinga+parseFloat($("#pWheight"+i).val())+valuea+parseFloat($("#pValue"+i).text());
   }
-  for(i=1;i<x+11;i++){
+  for(i=1;i<11;i++){
     contenedorfinal += ratingb+$("#pRating"+i).text()+weightingb+parseFloat($("#pWheight"+i).val())+valueb+parseFloat($("#pValue"+i).text());
   }
-  for(i=1;i<x+9;i++){
+  for(i=1;i<9;i++){
     contenedorfinal += ratingc+$("#pRating"+i).text()+weightingc+parseFloat($("#pWheight"+i).val())+valuec+parseFloat($("#pValue"+i).text());
   }
   url +=contenedorfinal+"&approved="+$("#de").text();
