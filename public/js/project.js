@@ -182,7 +182,7 @@ function printpdf(){
   var valuea = "&valuea[]=";
   var valueb = "&valueb[]=";
   var valueac = "&valuec[]=";
-  var contendorfinal+=pesopartea+pesoparteb+pesopartec;
+  var contendorfinal = contenedorfinal+pesopartea+pesoparteb+pesopartec;
   for(i=1;i<5;i++){
     contendorfinal += ratinga+$("#pRating"+i).text()+weightinga+parseFloat($("#pWheight"+i).val())+valuea+parseFloat($("#pValue"+i).text());
   }
