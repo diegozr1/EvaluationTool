@@ -149,7 +149,7 @@ function printpdf(){
   for(i=1;i<20;i++){
     contendorfinal += contenedorrespuesta+ $("#txtRespuesta"+i).val()+contenedorpregunta+$("#txtPregunta"+i).text();
   }
-  url +=contendorfinal;
+  url +=contendorfinal+"&result="+$("#txtResultCheckList"+i).text();
 
   window.open(url);
 }
