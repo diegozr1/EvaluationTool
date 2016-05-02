@@ -185,13 +185,13 @@ function printpdf(){
   var contenedorfinal;
   contenedorfinal+=pesopartea+pesoparteb+pesopartec;
   for(i=1;i<5;i++){
-    contenedorfinal += ratinga+$("#pRating"+i).text()+weightinga+parseFloat($("#pWheight"+i).val())+valuea+parseFloat($("#pValue"+i).text());
+    contenedorfinal += ratinga+"hola"+weightinga+parseFloat($("#pWheight"+i).val())+valuea+parseFloat($("#pValue"+i).text());
   }
   for(i=1;i<11;i++){
-    contenedorfinal += ratingb+$("#pRating"+i).text()+weightingb+parseFloat($("#pWheight"+i).val())+valueb+parseFloat($("#pValue"+i).text());
+    contenedorfinal += ratingb+"adios"+weightingb+parseFloat($("#pWheight"+i).val())+valueb+parseFloat($("#pValue"+i).text());
   }
   for(i=1;i<9;i++){
-    contenedorfinal += ratingc+$("#pRating"+i).text()+weightingc+parseFloat($("#pWheight"+i).val())+valuec+parseFloat($("#pValue"+i).text());
+    contenedorfinal += ratingc+"see you"+weightingc+parseFloat($("#pWheight"+i).val())+valuec+parseFloat($("#pValue"+i).text());
   }
   url +=contenedorfinal+"&approved="+$("#de").text();
 
