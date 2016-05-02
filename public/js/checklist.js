@@ -3,127 +3,127 @@ function checkListFunction(){
     var sumValues = 0.0;
 
 //What is the impact of not doing this project?
-    if(document.getElementById("sel1").value === "Low"){
+    if(document.getElementById("txtRespuesta4").value === "Low"){
         x = 5;
     }
-    else if(document.getElementById("sel1").value === "Medium"){
+    else if(document.getElementById("txtRespuesta4").value === "Medium"){
         x = 15;
     }
-    else if(document.getElementById("sel1").value === "High"){
+    else if(document.getElementById("txtRespuesta4").value === "High"){
         x = 30;
     }
     sumValues += Number(x);
 
 //What is the project risk to our organization?
-    if(document.getElementById("sel2").value === "Low"){
+    if(document.getElementById("txtRespuesta5").value === "Low"){
         x = -5;
     }
-    else if(document.getElementById("sel2").value === "Medium"){
+    else if(document.getElementById("txtRespuesta5").value === "Medium"){
         x = -15;
     }
-    else if(document.getElementById("sel2").value === "High"){
+    else if(document.getElementById("txtRespuesta5").value === "High"){
         x = -30;
     }
     sumValues += Number(x);
 
 //Does the proposed project fit in our risk profile?
-    if(document.getElementById("sel3").value === "No"){
+    if(document.getElementById("txtRespuesta6").value === "No"){
         x = -10;
     }
-    else if(document.getElementById("sel3").value === "Yes"){
+    else if(document.getElementById("txtRespuesta6").value === "Yes"){
         x = 10;
     }
     sumValues += Number(x);
 
 //What is the value of the project organization?
-    if(document.getElementById("sel4").value === "Low"){
+    if(document.getElementById("txtRespuesta7").value === "Low"){
         x = 10;
     }
-    else if(document.getElementById("sel4").value === "Medium"){
+    else if(document.getElementById("txtRespuesta7").value === "Medium"){
         x = 15;
     }
-    else if(document.getElementById("sel4").value === "High"){
+    else if(document.getElementById("txtRespuesta7").value === "High"){
         x = 25;
     }
     sumValues += Number(x);
 
 //Is our organization culture right for this type of project?
-    if(document.getElementById("sel5").value === "No"){
+    if(document.getElementById("txtRespuesta10").value === "No"){
         x = -5;
     }
-    else if(document.getElementById("sel5").value === "Yes"){
+    else if(document.getElementById("txtRespuesta10").value === "Yes"){
         x = 10;
     }
     sumValues += Number(x);
 
 //Will internal resources be available for this project?
-    if(document.getElementById("sel6").value === "No"){
+    if(document.getElementById("txtRespuesta11").value === "No"){
         x = -15;
     }
-    else if(document.getElementById("sel6").value === "Yes"){
+    else if(document.getElementById("txtRespuesta11").value === "Yes"){
         x = 10;
     }
     sumValues += Number(x);
 
 //Will we have to build or buy?
-    if(document.getElementById("sel7").value === "Buy"){
+    if(document.getElementById("txtRespuesta12").value === "Buy"){
         x = -15;
     }
-    else if(document.getElementById("sel7").value === "Rent"){
+    else if(document.getElementById("txtRespuesta12").value === "Rent"){
         x = -5;
     }
-    else if(document.getElementById("sel7").value === "Build"){
+    else if(document.getElementById("txtRespuesta12").value === "Build"){
         x = -10;
     }
-    else if(document.getElementById("sel7").value === "Nothing"){
+    else if(document.getElementById("txtRespuesta12").value === "Nothing"){
         x = 20;
     }
     sumValues += Number(x);
 
 //Is the timeline realistic?
-    if(document.getElementById("sel8").value === "No"){
+    if(document.getElementById("txtRespuesta14").value === "No"){
         x = -15;
     }
-    else if(document.getElementById("sel8").value === "Yes"){
+    else if(document.getElementById("txtRespuesta14").value === "Yes"){
         x = 10;
     }
     sumValues += Number(x);
 
 //Will staff training be required?
-    if(document.getElementById("sel9").value === "No"){
+    if(document.getElementById("txtRespuesta15").value === "No"){
         x = -10;
     }
-    else if(document.getElementById("sel9").value === "Yes"){
+    else if(document.getElementById("txtRespuesta15").value === "Yes"){
         x = 10;
     }
     sumValues += Number(x);
 
 //Is this a new initiative or path of an existing initiative?
-    if(document.getElementById("sel10").value === "New Initiative"){
+    if(document.getElementById("txtRespuesta17").value === "New Initiative"){
         x = 15;
     }
-    else if(document.getElementById("sel10").value === "A path"){
+    else if(document.getElementById("txtRespuesta17").value === "A path"){
         x = 10;
     }
     sumValues += Number(x);
 
 //How does this project interact with current projects?
-    if(document.getElementById("sel11").value === "Overlaps with other projects"){
+    if(document.getElementById("txtRespuesta18").value === "Overlaps with other projects"){
         x = -50;
     }
-    else if(document.getElementById("sel11").value === "They have perfect sinergy"){
+    else if(document.getElementById("txtRespuesta18").value === "They have perfect sinergy"){
         x = 25;
     }
-    else if(document.getElementById("sel11").value === "They are mutually exclusive"){
+    else if(document.getElementById("txtRespuesta18").value === "They are mutually exclusive"){
         x = 15;
     }
     sumValues += Number(x);
 
 //Is the technology available or new?
-    if(document.getElementById("sel12").value === "It´s available"){
+    if(document.getElementById("txtRespuesta19").value === "It´s available"){
         x = 15;
     }
-    else if(document.getElementById("sel12").value === "It´s a new technology"){
+    else if(document.getElementById("txtRespuesta19").value === "It´s a new technology"){
         x = -5;
     }
     sumValues += Number(x);
@@ -149,7 +149,7 @@ function printpdf(){
   for(i=1;i<20;i++){
     contendorfinal += contenedorrespuesta+ $("#txtRespuesta"+i).val()+contenedorpregunta+$("#txtPregunta"+i).text();
   }
-  url +=contendorfinal+"&result="+$("#txtResultCheckList"+i).text();
+  url +=contendorfinal+"&result="+$("#txtResultCheckList").text();
 
   window.open(url);
 }
