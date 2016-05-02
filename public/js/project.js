@@ -169,17 +169,30 @@ function showWeight(){
 }
 
 function printpdf(){
-  var x = parseInt($("#droplistbox").val());
-  var url ="http://generatepdf-ddnsnet.rhcloud.com/second.php?periods="+(x+1);
-  var contenedoroutflow = "&outflow[]=";
-  var contenedorinflow = "&inflow[]=";
-  var contenedorcomu = "&comu[]=";
-  var contenedornetcash = "&netcash[]=";
-  var contendorfinal;
-  for(i=0;i<x+1;i++){
-    contendorfinal += contenedoroutflow+ (parseFloat($("#outflow"+i).val())*-1)+contenedorinflow+parseFloat($("#inflow"+i).val()) +contenedorcomu+parseFloat($("#comulativecash"+i).val())+contenedornetcash+parseFloat($("#netcash"+i).val());
+  var url ="http://generatepdf-ddnsnet.rhcloud.com/fourth.php?";
+  var pesopartea= "&pesopartea="+parseFloat($("#pWeighti"+i).val());
+  var pesoparteb = "&pesoparteb="+parseFloat($("#sWeighti"+i).val());;
+  var pesopartec = "&pesopartec="+parseFloat($("#tWeighti"+i).val());;
+  var ratinga = "&ratinga[]=";
+  var ratingb = "&ratingb[]=";
+  var ratingc = "&ratingc[]=";
+  var weightinga = "&weightinga[]=";
+  var weightingb = "&weightingb[]=";
+  var weightingc = "&weightingc[]=";
+  var valuea = "&valuea[]=";
+  var valueb = "&valueb[]=";
+  var valueac = "&valuec[]=";
+  var contendorfinal+=pesopartea+pesoparteb+pesopartec;
+  for(i=1;i<5;i++){
+    contendorfinal += ratinga+$("#pRating"+i).text()+weightinga+parseFloat($("#pWheight"+i).val())+valuea+parseFloat($("#pValue"+i).text());
   }
-  url +=contendorfinal+"&netpresent="+parseFloat($("#netpresentvalue").val());
+  for(i=1;i<x+11;i++){
+    contendorfinal += ratingb+$("#pRating"+i).text()+weightingb+parseFloat($("#pWheight"+i).val())+valueb+parseFloat($("#pValue"+i).text());
+  }
+  for(i=1;i<x+9;i++){
+    contendorfinal += ratingc+$("#pRating"+i).text()+weightingc+parseFloat($("#pWheight"+i).val())+valuec+parseFloat($("#pValue"+i).text());
+  }
+  url +=contendorfinal+"&approved="+$("#de").text();
 
   window.open(url);
 }
