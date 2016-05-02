@@ -222,8 +222,8 @@ function printpdf(){
     contenedorfinal +=weightingc+parseFloat($("#tWheight"+i).val())+valuec+parseFloat($("#tValue"+i).text());
   }
   for(i=1;i<4;i++){
-    contenedorfinal += valorfinal + parseFloat($("#fValue"+i).val())
-    console.log( parseFloat($("#fValue"+i).val()));
+    contenedorfinal += valorfinal + parseFloat($("#fValue"+i).text())
+    console.log( parseFloat($("#fValue"+i).text()));
   }
   url +=contenedorfinal+"&approved="+$("#de").text();
 
