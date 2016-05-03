@@ -1,5 +1,5 @@
 angular.module('todoApp', [])
-  .controller('TodoListController', function() {
+  .controller('TodoListController', function($http) {
     var todoList = this;
 
     //todoList.todos = [];
