@@ -5,9 +5,9 @@ angular.module('todoApp', [])
     todoList.todos = [];
 
     $http.get("https://evaluationtool.firebaseio.com/.json")
-              .then(function(response) {
-                  todoList.todos = response.data;
-              });
+        .then(function(response) {
+            todoList.todos.push(response.data);
+        });
 
 
     todoList.addTodo = function() {
