@@ -4,10 +4,15 @@ angular.module('todoApp', [])
 
         var ref = new Firebase("https://evaluationtool.firebaseio.com/");
 
-        $http.get("https://evaluationtool.firebaseio.com/.json")
+        ref.on("child_added", function(snapshot, prevChildKey) {
+          var todos      = snapshot.val();
+          todoList.todos = todos;
+        });
+        /*$http.get("https://evaluationtool.firebaseio.com/.json")
             .then(function(response) {
                 todoList.todos = response.data;
-            });
+                todoList.count = response.data.count;
+            });            */
 
         todoList.addTodo = function() {
             ref.push().set({text:todoList.todoText, done:false})
