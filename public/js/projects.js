@@ -8,8 +8,8 @@ angular.module('todoApp', [])
             });
 
         todoList.addTodo = function() {
-            ref.set({text:todoList.todoText, done:false});
-            todoList.todos.push().set({text:todoList.todoText, done:false});
+            ref.push().set({text:todoList.todoText, done:false})
+            todoList.todos.push({text:todoList.todoText, done:false});
             todoList.todoText = '';
         };
 
