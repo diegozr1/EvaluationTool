@@ -1,7 +1,7 @@
 $(document).ready(function(){
     $.getJSON("https://api.coinbase.com/v2/exchange-rates",function(result){
       $("#usdmxn").append(result.data.rates['MXN'] + " ");
-      $("#usdbrl").append(result.data.rates['BRL'] + " ");
+      $("#usdbrl").append(result.data.rates['GBP'] + " ");
       $("#usdeur").append(result.data.rates['EUR'] + " ");
       $("#usdjpy").append(result.data.rates['JPY'] + " ");
       /*
