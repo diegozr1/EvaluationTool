@@ -1,12 +1,12 @@
 angular.module('todoApp', [])
     .controller('TodoListController', function($http) {
         var todoList = this;
-
-        $http.get("https://api.myjson.com/bins/527de")
+        var ref = new Firebase("https://evaluationtool.firebaseio.com/");
+        $http.get("https://evaluationtool.firebaseio.com/.json")
             .then(function(response) {
                 todoList.todos = response.data;
             });
-        
+
         todoList.addTodo = function() {
             todoList.todos.push({text:todoList.todoText, done:false});
             todoList.todoText = '';
@@ -28,4 +28,3 @@ angular.module('todoApp', [])
             });
         };
     });
-
