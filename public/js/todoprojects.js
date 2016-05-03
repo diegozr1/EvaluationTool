@@ -1,12 +1,12 @@
 angular.module('todoApp', [])
     .controller('TodoListController', function($http) {
         var todoList = this;
-        $scope.todos = [];
+        todoList.todos = [];
         var ref = new Firebase("https://evaluationtool.firebaseio.com/");
 
         ref.on("child_added", function(snapshot, prevChildKey) {
           var data      = snapshot.val();
-          $scope.todos.push(data);
+          todoList.todos.push(data);
         });
         /*$http.get("https://evaluationtool.firebaseio.com/.json")
             .then(function(response) {
@@ -14,14 +14,14 @@ angular.module('todoApp', [])
                 todoList.count = response.data.count;
             });            */
 
-        $scope.addTodo = function() {
+        todoList.addTodo = function() {
             ref.push().set({text:todoList.todoText, done:false})
             //todoList.todos.push({text:todoList.todoText, done:false});
             todoList.todoText = '';
             location.reload();
         };
 
-        $scope.remaining = function() {
+        todoList.remaining = function() {
             var count = 0;
             angular.forEach(todoList.todos, function(todo) {
                 count += todo.done ? 0 : 1;
@@ -29,7 +29,7 @@ angular.module('todoApp', [])
             return count;
         };
 
-        $scope.archive = function() {
+        todoList.archive = function() {
             var oldTodos = todoList.todos;
             todoList.todos = [];
             angular.forEach(oldTodos, function(todo) {
