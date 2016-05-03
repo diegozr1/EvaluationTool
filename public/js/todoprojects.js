@@ -8,6 +8,9 @@ angular.module('todoApp', [])
           var data      = snapshot.val();
           todoList.todos.push(data);
         });
+
+        todoList.archive();
+
         /*$http.get("https://evaluationtool.firebaseio.com/.json")
             .then(function(response) {
                 todoList.todos = response.data;
