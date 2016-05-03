@@ -1,7 +1,7 @@
 angular.module('todoApp', [])
     .controller('TodoListController', function($http) {
         var todoList = this;
-        var ref = new Firebase("https://evaluationtool.firebaseio.com/");
+        //var ref = new Firebase("https://evaluationtool.firebaseio.com/");
         $http.get("https://evaluationtool.firebaseio.com/.json")
             .then(function(response) {
                 todoList.todos = response.data;
