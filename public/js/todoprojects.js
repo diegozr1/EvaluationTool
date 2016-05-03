@@ -1,12 +1,12 @@
 angular.module('todoApp', [])
     .controller('TodoListController', function($http) {
         var todoList = this;
-
+        todoList.todos = [];
         var ref = new Firebase("https://evaluationtool.firebaseio.com/");
 
         ref.on("child_added", function(snapshot, prevChildKey) {
-          var todos      = snapshot.val();
-          todoList.todos = todos;
+          var data      = snapshot.val();
+          todoList.todos.push(data);
         });
         /*$http.get("https://evaluationtool.firebaseio.com/.json")
             .then(function(response) {
@@ -16,7 +16,7 @@ angular.module('todoApp', [])
 
         todoList.addTodo = function() {
             ref.push().set({text:todoList.todoText, done:false})
-            todoList.todos.push({text:todoList.todoText, done:false});
+            //todoList.todos.push({text:todoList.todoText, done:false});
             todoList.todoText = '';
             location.reload();
         };
