@@ -2,11 +2,11 @@ angular.module('todoApp', [])
   .controller('TodoListController', function() {
     var todoList = this;
 
-    todoList.todos = [];
+    //todoList.todos = [];
 
-    $http.get("https://evaluationtool.firebaseio.com/.json")
+    $http.get("https://api.myjson.com/bins/2rm2s")
         .then(function(response) {
-            todoList.todos.push(response.data);
+            todoList.todos = response.data;
         });
 
 
