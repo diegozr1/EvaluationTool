@@ -193,9 +193,9 @@ function printpdf(){
     }else if($("#pRating"+i).val()==3){
       contenedorfinal+=ratinga+"Medium";
     }else if($("#pRating"+i).val()==5){
-      rcontenedorfinal+=ratinga+"High";
+      contenedorfinal+=ratinga+"High";
     }else{
-      rcontenedorfinal+=ratinga+"null";
+      contenedorfinal+=ratinga+"null";
     }
     contenedorfinal +=weightinga+parseFloat($("#pWheight"+i).val())+valuea+parseFloat($("#pValue"+i).text());
   }
@@ -205,9 +205,9 @@ function printpdf(){
     }else if($("#sRating"+i).val()==3){
       contenedorfinal+=ratingb+"Medium";
     }else if($("#sRating"+i).val()==5){
-      rcontenedorfinal+=ratingb+"High";
+      contenedorfinal+=ratingb+"High";
     }else{
-      rcontenedorfinal+=ratingb+"null";
+      contenedorfinal+=ratingb+"null";
     }
     contenedorfinal +=weightingb+parseFloat($("#sWheight"+i).val())+valueb+parseFloat($("#sValue"+i).text());
   }
@@ -217,9 +217,9 @@ function printpdf(){
     }else if($("#tRating"+i).val()==3){
       contenedorfinal+=ratingc+"Medium";
     }else if($("#tRating"+i).val()==5){
-      rcontenedorfinal+=ratingc+"High";
+      contenedorfinal+=ratingc+"High";
     }else{
-      rcontenedorfinal+=ratingc+"null";
+      contenedorfinal+=ratingc+"null";
     }
     contenedorfinal +=weightingc+parseFloat($("#tWheight"+i).val())+valuec+parseFloat($("#tValue"+i).text());
   }
