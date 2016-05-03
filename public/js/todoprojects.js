@@ -9,13 +9,11 @@ angular.module('todoApp', [])
           todoList.todos.push(data);
         });
 
-        todoList.archive();
-
         /*$http.get("https://evaluationtool.firebaseio.com/.json")
             .then(function(response) {
                 todoList.todos = response.data;
                 todoList.count = response.data.count;
-            });            */
+            });  */
 
         todoList.addTodo = function() {
             ref.push().set({text:todoList.todoText, done:false})
