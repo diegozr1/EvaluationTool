@@ -1,6 +1,6 @@
 # EvaluationTool
 
-##A tool for evaluating a project with different methods
+## A tool for evaluating a project with different methods
 
  - PayBack Period
  - Net Present Value
@@ -8,7 +8,7 @@
  - Project Screening Matrix
 
 
-##El proyecto esta construido utilizando
+## Project built using 
 
  - Node.js (Express.js)
  - Mongodb (Mongoose)
